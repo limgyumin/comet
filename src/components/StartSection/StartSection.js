@@ -9,7 +9,7 @@ const ColorButton = withStyles((theme) => ({
     fontFamily: "Noto Sans KR",
     fontWeight: 300,
     backgroundColor: "#0080FF",
-    width: "20rem",
+    width: 130,
     "&:hover": {
       boxShadow: "none",
       backgroundColor: "#0080FF",
