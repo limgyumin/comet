@@ -10,7 +10,7 @@ const ColorButton = withStyles((theme) => ({
     fontFamily: "Noto Sans KR",
     fontWeight: 300,
     backgroundColor: "#0080FF",
-    width: 130,
+    width: "8rem",
     "&:hover": {
       boxShadow: "none",
       backgroundColor: "#0080FF",
@@ -20,7 +20,7 @@ const ColorButton = withStyles((theme) => ({
 
 const CssTextField = withStyles({
   root: {
-    width: "20rem",
+    width: "18rem",
     marginBottom: "1.4rem",
     "& label.Mui-focused": {
       color: "#0080FF",
