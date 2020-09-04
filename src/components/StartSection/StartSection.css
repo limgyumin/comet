@@ -4,6 +4,10 @@
   margin-left: 1.6rem;
 }
 
+.button {
+  text-decoration: none;
+}
+
 .big_title,
 .small_title {
   font-weight: 300;

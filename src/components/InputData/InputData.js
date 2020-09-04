@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./InputData.css";
 import { Button, TextField, withStyles } from "@material-ui/core";
+import FadeIn from "react-fade-in";
 
 const ColorButton = withStyles((theme) => ({
   root: {
@@ -40,8 +41,8 @@ const InputData = () => {
   const textHandler = () => {};
 
   return (
-    <div>
-      <div className="contents">
+    <div className="contents">
+      <FadeIn>
         <h1 className="big_title">시작하기 앞서서</h1>
         <h3 className="small_title">
           Comet은 당신의 GitHub 아이디를 필요로 합니다.
@@ -62,7 +63,7 @@ const InputData = () => {
         >
           완료
         </ColorButton>
-      </div>
+      </FadeIn>
     </div>
   );
 };

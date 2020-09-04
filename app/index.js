@@ -9,6 +9,7 @@ const createWindow = () => {
     width: 960,
     height: 660,
     titleBarStyle: "hiddenInset",
+    resizable: false,
     webPreferences: {
       nodeIntegration: true,
     },
