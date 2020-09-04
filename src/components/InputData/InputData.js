@@ -1,5 +1,6 @@
-import React from "react";
-import { Button, withStyles } from "@material-ui/core";
+import React, { useState } from "react";
+import "./InputData.css";
+import { Button, TextField, withStyles } from "@material-ui/core";
 
 const ColorButton = withStyles((theme) => ({
   root: {
@@ -16,16 +17,48 @@ const ColorButton = withStyles((theme) => ({
   },
 }))(Button);
 
+const CssTextField = withStyles({
+  root: {
+    width: "20rem",
+    marginBottom: "1.4rem",
+    "& label.Mui-focused": {
+      color: "#0080FF",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "#0080FF",
+    },
+    "& .MuiOutlinedInput-root": {
+      "&.Mui-focused fieldset": {
+        borderColor: "#0080FF",
+      },
+    },
+  },
+})(TextField);
+
 const InputData = () => {
+  const [id, setId] = useState("");
+  const textHandler = () => {};
+
   return (
     <div>
       <div className="contents">
-        <h1 className="big_title">Hello, There!</h1>
+        <h1 className="big_title">시작하기 앞서서</h1>
         <h3 className="small_title">
-          Comet은 당신의 1일 1커밋을 도와드립니다.
+          Comet은 당신의 GitHub 아이디를 필요로 합니다.
         </h3>
-        <ColorButton className="start_button" variant="contained">
-          시작하기
+        <CssTextField
+          label="GitHub 아이디"
+          variant="outlined"
+          size="small"
+          onChange={() => {}}
+        />
+        <ColorButton
+          variant="contained"
+          onClick={() => {
+            console.log("clicked");
+          }}
+        >
+          완료
         </ColorButton>
       </div>
     </div>
