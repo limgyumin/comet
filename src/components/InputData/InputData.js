@@ -50,7 +50,9 @@ const InputData = () => {
           label="GitHub 아이디"
           variant="outlined"
           size="small"
-          onChange={() => {}}
+          onChange={() => {
+            console.log("typed");
+          }}
         />
         <ColorButton
           variant="contained"

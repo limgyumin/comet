@@ -8,7 +8,7 @@ const Register = () => {
   const [click, setClick] = useState(false);
   return (
     <div className="register">
-      <InputData />
+      {click ? <InputData /> : <StartSection setClick={setClick} />}
       <div className="background">
         <img src={background} alt={background} />
       </div>
