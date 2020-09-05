@@ -9,7 +9,7 @@ import UseAPI from "./UseAPI";
 
 const cache = new InMemoryCache();
 
-const HttpLink = new HttpLink({
+const httpLink = new HttpLink({
   uri: "https://api.github.com/graphql",
 });
 
@@ -24,7 +24,7 @@ const authLink = setContext((_, { headers }) => {
 
 const client = new ApolloClient({
   cache,
-  link: authLink.concat(HttpLink),
+  link: authLink.concat(httpLink),
 });
 
 const GitHubAPI = () => {

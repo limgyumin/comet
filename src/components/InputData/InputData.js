@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./InputData.css";
 import { Button, TextField, withStyles } from "@material-ui/core";
 import FadeIn from "react-fade-in";
+import { Link } from "react-router-dom";
 
 const ColorButton = withStyles((theme) => ({
   root: {
@@ -55,14 +56,9 @@ const InputData = () => {
             console.log("typed");
           }}
         />
-        <ColorButton
-          variant="contained"
-          onClick={() => {
-            console.log("clicked");
-          }}
-        >
-          완료
-        </ColorButton>
+        <Link to="/main" className="button">
+          <ColorButton variant="contained">완료</ColorButton>
+        </Link>
       </FadeIn>
     </div>
   );

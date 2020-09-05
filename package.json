@@ -15,6 +15,8 @@
     "apollo-link-http": "^1.5.17",
     "custom-electron-titlebar": "^3.2.4",
     "electron-is-dev": "^1.2.0",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
