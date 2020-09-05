@@ -1,0 +1,38 @@
+.header_main {
+  width: 100%;
+  height: 3.6rem;
+  background-color: #24292e;
+  border-bottom: 1.6px solid;
+  border-color: #000000;
+}
+
+.header_user {
+  display: flex;
+  width: 13rem;
+  height: 100%;
+  align-items: center;
+  margin-left: 0.8rem;
+  border-right: 1.6px solid;
+  border-color: #000000;
+}
+
+.header_user img {
+  border-radius: 20rem;
+  width: 2rem;
+  margin-right: 0.6rem;
+}
+
+.header_name,
+.header_bio {
+  color: #ffffff;
+}
+
+.header_name {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.header_bio {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
