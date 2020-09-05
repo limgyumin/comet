@@ -4,7 +4,7 @@ import { autobind } from "core-decorators";
 @autobind
 class UserStore {
   @observable userId;
-  @observable userData;
+  @observable userInfo;
 
   @action
   handleUserId = (id) => {
@@ -13,7 +13,7 @@ class UserStore {
 
   @action
   handleUserData = (data) => {
-    this.userData = data;
+    this.userInfo = data.user;
   };
 }
 
