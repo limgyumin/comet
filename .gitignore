@@ -25,3 +25,5 @@ yarn-error.log*
 # output
 build
 dist
+
+src/config

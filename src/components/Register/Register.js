@@ -1,17 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Register.css";
 import background from "../../assets/images/background.svg";
 import StartSection from "../StartSection/StartSection";
 import InputData from "../InputData/InputData";
-import { Route, BrowserRouter } from "react-router-dom";
 
 const Register = () => {
+  const [isStarted, setIsStarted] = useState(false);
   return (
     <div className="register">
-      <BrowserRouter>
-        <Route path="/" exact={true} component={StartSection} />
-        <Route path="/input" component={InputData} />
-      </BrowserRouter>
+      {isStarted ? <InputData /> : <StartSection setIsStarted={setIsStarted} />}
       <div className="background">
         <img src={background} alt={background} />
       </div>
