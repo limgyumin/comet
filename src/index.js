@@ -2,12 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { Provider } from "mobx-react";
 import * as serviceWorker from "./serviceWorker";
+import stores from "./stores";
+import client from "./assets/api/client";
+import { ApolloProvider } from "react-apollo";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ApolloProvider client={client}>
+    <Provider store={stores}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Provider>
+  </ApolloProvider>,
   document.getElementById("root")
 );
 

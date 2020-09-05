@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./InputData.css";
 import { Button, TextField, withStyles } from "@material-ui/core";
 import FadeIn from "react-fade-in";
 import { Link } from "react-router-dom";
+import { observer } from "mobx-react";
+import stores from "../../stores";
 
 const ColorButton = withStyles((theme) => ({
   root: {
@@ -37,9 +39,14 @@ const CssTextField = withStyles({
   },
 })(TextField);
 
-const InputData = () => {
+const InputData = observer(() => {
   const [id, setId] = useState("");
-  const textHandler = () => {};
+
+  const { handleUserId } = stores.UserStore;
+
+  const onSubmit = useCallback(() => {
+    handleUserId(id);
+  }, [id, handleUserId]);
 
   return (
     <div className="contents">
@@ -51,17 +58,21 @@ const InputData = () => {
         <CssTextField
           label="GitHub 아이디"
           variant="outlined"
+          value={id}
           size="small"
-          onChange={() => {
-            console.log("typed");
+          onChange={(e) => {
+            setId(e.target.value);
+            console.log(e.target.value);
           }}
         />
         <Link to="/main" className="button">
-          <ColorButton variant="contained">완료</ColorButton>
+          <ColorButton variant="contained" onClick={() => onSubmit()}>
+            완료
+          </ColorButton>
         </Link>
       </FadeIn>
     </div>
   );
-};
+});
 
 export default InputData;
