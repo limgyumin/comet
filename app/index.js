@@ -12,6 +12,7 @@ const createWindow = () => {
     resizable: false,
     webPreferences: {
       nodeIntegration: true,
+      enableRemoteModule: true,
     },
   });
   mainWindow.loadURL(
