@@ -31,14 +31,26 @@ const ShowTodayCommit = observer(() => {
   }, [todayCommit]);
 
   return (
-    <div className="today_container">
-      <div className="today_title">
-        <h1 className="today_commit">오늘 커밋</h1>
-        {todayCommit && <CountUp end={todayCommit} className="today_count" />}
-        <h1 className="today_unit">회</h1>
+    <FadeIn>
+      <div className="today_container">
+        <FadeIn>
+          <div className="today_title">
+            <h1 className="today_commit">오늘 커밋</h1>
+            {todayCommit > 0 ? (
+              <CountUp end={todayCommit} className="today_count" />
+            ) : (
+              <h1 className="today_no_commit">{todayCommit}</h1>
+            )}
+            <h1 className="today_unit">회</h1>
+          </div>
+          {todayCommit > 0 ? (
+            <h3 className="today_great">훌륭해요! 이대로 쭉 갑시다!</h3>
+          ) : (
+            <h3 className="today_bad">잔소리 알림 장전! 당장 커밋하세요!</h3>
+          )}
+        </FadeIn>
       </div>
-      <h3 className="today_comment">훌륭해요! 이대로 쭉 갑시다!</h3>
-    </div>
+    </FadeIn>
   );
 });
 
