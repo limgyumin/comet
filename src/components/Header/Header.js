@@ -16,7 +16,7 @@ const Header = observer(() => {
   return (
     <div className="header_main">
       <div className="header_user">
-        {userInfo && (
+        {userInfo ? (
           <>
             <img src={userInfo.avatarUrl} />
             <div className="header_info">
@@ -24,6 +24,14 @@ const Header = observer(() => {
               <p className="header_bio">
                 {userInfo.bio ? sliceText(userInfo.bio, 30) : "-"}
               </p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="loading_image"></div>
+            <div className="loading_info">
+              <div className="loading_name"></div>
+              <div className="loading_bio"></div>
             </div>
           </>
         )}

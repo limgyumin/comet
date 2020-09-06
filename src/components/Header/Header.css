@@ -36,3 +36,24 @@
   font-size: 0.7rem;
   font-weight: 100;
 }
+
+.loading_image {
+  border-radius: 20rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #494f54;
+  margin-right: 0.6rem;
+}
+
+.loading_name {
+  width: 5rem;
+  height: 0.7rem;
+  margin-bottom: 0.3rem;
+  background-color: #494f54;
+}
+
+.loading_bio {
+  width: 7rem;
+  height: 0.5rem;
+  background-color: #494f54;
+}
