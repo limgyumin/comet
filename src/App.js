@@ -2,13 +2,29 @@ import React from "react";
 import "./App.css";
 import Register from "./components/Register";
 import Main from "./components/Main";
-import { BrowserRouter, Route } from "react-router-dom";
+import userIdVerification from "./lib/userIdVerification";
+import { BrowserRouter, Route, Redirect, Router } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path="/" exact={true} component={Register} />
-      <Route path="/main" component={Main} />
+      <Route
+        path="/main"
+        render={() => {
+          return userIdVerification() ? <Main /> : <Redirect to={"/"} />;
+        }}
+      />
+      <Route
+        path="/"
+        render={() => {
+          return userIdVerification() ? (
+            <Redirect to={"/main"} />
+          ) : (
+            <Register />
+          );
+        }}
+        exact={true}
+      />
     </BrowserRouter>
   );
 }
