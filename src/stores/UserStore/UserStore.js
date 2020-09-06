@@ -6,6 +6,7 @@ class UserStore {
   @observable userId;
   @observable userInfo;
   @observable todayCommit;
+  @observable goalCommit;
 
   @action
   handleUserId = (id) => {
@@ -33,6 +34,11 @@ class UserStore {
   @action
   setTodayCommit = (commit) => {
     this.todayCommit = commit;
+  };
+
+  @action
+  setGoalCommit = (commit) => {
+    this.goalCommit = commit;
   };
 }
 

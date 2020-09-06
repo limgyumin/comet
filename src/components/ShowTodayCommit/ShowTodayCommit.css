@@ -19,7 +19,7 @@
 
 .today_commit {
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-right: 0.4rem;
   margin-top: 0.3rem;
   color: #24292e;
@@ -39,7 +39,7 @@
 
 .today_unit {
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 0.3rem;
   color: #24292e;
 }

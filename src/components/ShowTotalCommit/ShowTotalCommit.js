@@ -7,13 +7,19 @@ import CountUp from "react-countup";
 import FadeIn from "react-fade-in";
 
 const ShowTotalCommit = observer(() => {
-  const { userInfo } = stores.UserStore;
+  const { userInfo, goalCommit, setGoalCommit } = stores.UserStore;
 
   const {
     contributionsCollection: {
       contributionCalendar: { totalContributions },
     },
   } = userInfo;
+
+  if (totalContributions < 100) {
+    setGoalCommit(Math.ceil(totalContributions / 10) * 10);
+  } else {
+    setGoalCommit(Math.ceil(totalContributions / 100) * 100);
+  }
 
   return (
     <div className="total_container">
@@ -23,7 +29,10 @@ const ShowTotalCommit = observer(() => {
           <CountUp end={totalContributions} className="total_count" />
           <h1 className="total_unit">회</h1>
         </div>
-        <h3 className="total_goal">동해물과 백두산이 마르고 닳도록</h3>
+        <h3 className="total_goal">
+          {goalCommit} 커밋 까지 {goalCommit - totalContributions} 커밋
+          남았습니다.
+        </h3>
       </FadeIn>
     </div>
   );
