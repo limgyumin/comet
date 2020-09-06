@@ -1,5 +1,6 @@
 import React from "react";
 import "./StartSection.css";
+import FadeIn from "react-fade-in";
 import { Button, withStyles } from "@material-ui/core";
 
 const ColorButton = withStyles((theme) => ({
@@ -19,8 +20,8 @@ const ColorButton = withStyles((theme) => ({
 
 const StartSection = ({ setIsStarted }) => {
   return (
-    <div>
-      <div className="contents">
+    <div className="contents">
+      <FadeIn>
         <h1 className="big_title">Hello, There!</h1>
         <h3 className="small_title">
           Comet은 당신의 1일 1커밋을 도와드립니다.
@@ -33,7 +34,7 @@ const StartSection = ({ setIsStarted }) => {
         >
           시작하기
         </ColorButton>
-      </div>
+      </FadeIn>
     </div>
   );
 };
