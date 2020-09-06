@@ -26,6 +26,15 @@ const ShowTodayCommit = observer(() => {
     });
   };
 
+  const challenge = {
+    width: `${todayCommit * 10}%`,
+  };
+
+  const complete = {
+    width: "100%",
+    backgroundColor: "#FFB300",
+  };
+
   useEffect(() => {
     getTodayCommit();
   }, [todayCommit]);
@@ -43,11 +52,22 @@ const ShowTodayCommit = observer(() => {
             )}
             <h1 className="today_unit">회</h1>
           </div>
-          {todayCommit > 0 ? (
-            <h3 className="today_great">훌륭해요! 이대로 쭉 갑시다!</h3>
-          ) : (
-            <h3 className="today_bad">잔소리 알림 장전! 당장 커밋하세요!</h3>
-          )}
+          <div className="today_comment">
+            {todayCommit > 0 ? (
+              <h3 className="today_great">훌륭해요! 이대로 쭉 갑시다!</h3>
+            ) : (
+              <h3 className="today_bad">잔소리 알림 장전! 당장 커밋하세요!</h3>
+            )}
+          </div>
+          <div className="progress_bar">
+            <div
+              className="inside_bar"
+              style={todayCommit >= 10 ? complete : challenge}
+            ></div>
+          </div>
+          <p className="max_commit">
+            {todayCommit}/{10}
+          </p>
         </FadeIn>
       </div>
     </FadeIn>

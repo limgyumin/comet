@@ -44,6 +44,12 @@
   color: #24292e;
 }
 
+.today_comment {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .today_great {
   font-size: 0.9rem;
   font-weight: 400;
@@ -54,4 +60,27 @@
   font-size: 0.9rem;
   font-weight: 400;
   color: #ff5e5e;
+}
+
+.progress_bar {
+  width: 30rem;
+  height: 0.7rem;
+  background-color: #b4d9ff;
+  border-radius: 10rem;
+}
+
+.inside_bar {
+  width: 0;
+  height: 100%;
+  margin-top: 1rem;
+  background-color: #0080ff;
+  border-radius: 10rem;
+}
+
+.max_commit {
+  display: block;
+  width: 30rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #a0a1a2;
 }
