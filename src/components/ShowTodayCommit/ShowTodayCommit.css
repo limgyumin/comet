@@ -1,0 +1,42 @@
+.today_container {
+  border: 1px solid;
+  border-radius: 1rem;
+  border-color: #eeeeee;
+  height: 12rem;
+  margin: 0 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.today_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.today_commit {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-right: 0.4rem;
+  margin-top: 0.3rem;
+  color: #24292e;
+}
+
+.today_count {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.today_unit {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
+
+.today_comment {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #60e376;
+}
