@@ -1,4 +1,4 @@
-.container {
+.total_container {
   width: 100%;
   height: 8rem;
   display: flex;
@@ -6,13 +6,13 @@
   justify-content: center;
   align-items: center;
 }
-.show_commit {
+.total_title {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.show_total {
+.total_commit {
   font-size: 2.2rem;
   font-weight: 500;
   margin-right: 0.4rem;
@@ -20,18 +20,18 @@
   color: #24292e;
 }
 
-.show_count {
+.total_count {
   font-weight: 700;
   font-size: 3rem;
 }
 
-.show_unit {
+.total_unit {
   font-weight: 500;
   font-size: 2.2rem;
   margin-top: 0.3rem;
 }
 
-.show_goal {
+.total_goal {
   font-weight: 400;
   font-size: 1rem;
   color: #757b81;

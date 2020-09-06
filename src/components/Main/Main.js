@@ -33,7 +33,7 @@ const Main = observer(() => {
           <ShowTodayCommit />
         </>
       ) : (
-        <div className="loader">
+        <div className="main_loader">
           <ReactLoading
             type={"bars"}
             color={"#DEDEDE"}

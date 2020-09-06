@@ -16,14 +16,14 @@ const ShowTotalCommit = observer(() => {
   } = userInfo;
 
   return (
-    <div className="container">
+    <div className="total_container">
       <FadeIn>
-        <div className="show_commit">
-          <h1 className="show_total">전체 커밋</h1>
-          <CountUp end={totalContributions} className="show_count" />
-          <h1 className="show_unit">회</h1>
+        <div className="total_title">
+          <h1 className="total_commit">전체 커밋</h1>
+          <CountUp end={totalContributions} className="total_count" />
+          <h1 className="total_unit">회</h1>
         </div>
-        <h3 className="show_goal">동해물과 백두산이 마르고 닳도록</h3>
+        <h3 className="total_goal">동해물과 백두산이 마르고 닳도록</h3>
       </FadeIn>
     </div>
   );
