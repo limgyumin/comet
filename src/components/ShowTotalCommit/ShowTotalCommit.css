@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.show_commit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show_total {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-right: 0.4rem;
+  margin-top: 0.3rem;
+  color: #24292e;
+}
+
+.show_count {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.show_unit {
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin-top: 0.3rem;
+}
+
+.show_goal {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #757b81;
+  text-align: center;
+}
