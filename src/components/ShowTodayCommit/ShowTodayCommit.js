@@ -55,8 +55,10 @@ const ShowTodayCommit = observer(() => {
           <div className="today_comment">
             {todayCommit <= 0 ? (
               <h3 className="today_bad">잔소리 알림 장전! 당장 커밋하세요!</h3>
-            ) : (
+            ) : todayCommit < 10 ? (
               <h3 className="today_great">훌륭해요! 이대로 쭉 갑시다!</h3>
+            ) : (
+              <h3 className="today_complete">목표 달성 완료! 아주 잘했어요!</h3>
             )}
           </div>
           <div className="progress_bar">
