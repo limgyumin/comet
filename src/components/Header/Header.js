@@ -4,6 +4,7 @@ import stores from "../../stores";
 import "./Header.css";
 
 const Header = observer(() => {
+  const { userInfo } = stores.UserStore;
   const sliceText = (string, maxLen) => {
     if (string.length > maxLen) {
       return string.slice(0, maxLen) + "...";
@@ -12,7 +13,6 @@ const Header = observer(() => {
     }
   };
 
-  const { userInfo } = stores.UserStore;
   return (
     <div className="header_main">
       <div className="header_user">
