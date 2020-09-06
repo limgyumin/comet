@@ -8,6 +8,7 @@ import Header from "components/Header";
 import ShowTotalCommit from "components/ShowTotalCommit";
 import ReactLoading from "react-loading";
 import "./Main.css";
+import ShowTodayCommit from "components/ShowTodayCommit";
 
 const Main = observer(() => {
   const { userInfo, handleUserData, getUserId } = stores.UserStore;
@@ -27,12 +28,15 @@ const Main = observer(() => {
     <>
       <Header />
       {!loading && userInfo ? (
-        <ShowTotalCommit />
+        <>
+          <ShowTotalCommit />
+          <ShowTodayCommit />
+        </>
       ) : (
         <div className="loader">
           <ReactLoading
             type={"bars"}
-            color={"#EEEEEE"}
+            color={"#DEDEDE"}
             height={"8%"}
             width={"8%"}
           />

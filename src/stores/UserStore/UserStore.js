@@ -5,6 +5,7 @@ import { autobind } from "core-decorators";
 class UserStore {
   @observable userId;
   @observable userInfo;
+  @observable todayCommit;
 
   @action
   handleUserId = (id) => {
@@ -27,6 +28,11 @@ class UserStore {
   getUserId = () => {
     this.userId = localStorage.getItem("key");
     return this.userId;
+  };
+
+  @action
+  setTodayCommit = (commit) => {
+    this.todayCommit = commit;
   };
 }
 
