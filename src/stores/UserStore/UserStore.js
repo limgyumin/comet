@@ -15,6 +15,19 @@ class UserStore {
   handleUserData = (data) => {
     this.userInfo = data.user;
   };
+
+  @action
+  setUserId = (id) => {
+    localStorage.setItem("key", id);
+    const userData = localStorage.getItem("key");
+    console.log("saved : " + userData);
+  };
+
+  @action
+  getUserId = () => {
+    this.userId = localStorage.getItem("key");
+    return this.userId;
+  };
 }
 
 export default UserStore;

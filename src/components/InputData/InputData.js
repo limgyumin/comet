@@ -41,11 +41,11 @@ const CssTextField = withStyles({
 
 const InputData = observer(() => {
   const [id, setId] = useState("");
-
-  const { handleUserId } = stores.UserStore;
+  const { handleUserId, setUserId } = stores.UserStore;
 
   const onSubmit = useCallback(() => {
     handleUserId(id);
+    setUserId(id);
   }, [id, handleUserId]);
 
   return (
