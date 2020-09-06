@@ -68,6 +68,12 @@
   color: #ffb300;
 }
 
+.today_tooMuch {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #0469ff;
+}
+
 .progress_bar {
   width: 30rem;
   height: 0.7rem;
