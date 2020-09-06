@@ -1,5 +1,5 @@
 const userIdVerification = () => {
-  const userId = localStorage.getItem("key");
+  const userId = localStorage.getItem("userId");
 
   if (userId !== undefined) {
     return userId;

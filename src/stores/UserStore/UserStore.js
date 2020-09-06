@@ -20,14 +20,12 @@ class UserStore {
 
   @action
   setUserId = (id) => {
-    localStorage.setItem("key", id);
-    const userData = localStorage.getItem("key");
-    console.log("saved : " + userData);
+    localStorage.setItem("userId", id);
   };
 
   @action
   getUserId = () => {
-    this.userId = localStorage.getItem("key");
+    this.userId = localStorage.getItem("userId");
     return this.userId;
   };
 
