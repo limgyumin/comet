@@ -6,8 +6,8 @@ import GET_GITHUB_API from "../../assets/api/gql/userInfoQuery";
 import Header from "components/Header";
 
 const Main = observer(() => {
-  const { userInfo, handleUserData, userId } = stores.UserStore;
-  const { data, loading, error } = useQuery(GET_GITHUB_API(userId));
+  const { userInfo, handleUserData, getUserId } = stores.UserStore;
+  const { data, loading, error } = useQuery(GET_GITHUB_API(getUserId()));
 
   useEffect(() => {
     if (!loading) {
@@ -15,8 +15,11 @@ const Main = observer(() => {
     }
   }, [handleUserData, loading]);
 
-  console.log(userInfo);
-  return <div>{loading || !userInfo ? <>Loading</> : <Header />}</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 });
 
 export default Main;
