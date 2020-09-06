@@ -53,7 +53,7 @@
 .today_great {
   font-size: 0.9rem;
   font-weight: 400;
-  color: #60e376;
+  color: #0080ff;
 }
 
 .today_bad {
@@ -71,7 +71,7 @@
 .today_tooMuch {
   font-size: 0.9rem;
   font-weight: 400;
-  color: #0469ff;
+  color: #6f7175;
 }
 
 .progress_bar {
