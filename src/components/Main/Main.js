@@ -3,19 +3,24 @@ import { observer } from "mobx-react";
 import stores from "../../stores";
 import { useQuery } from "@apollo/react-hooks";
 import GET_GITHUB_API from "../../assets/api/gql/userInfoQuery";
+import { useHistory, withRouter } from "react-router-dom";
 
-import Header from "components/Header";
-import ShowTotalCommit from "components/ShowTotalCommit";
-import ReactLoading from "react-loading";
 import "./Main.css";
+import Header from "components/Header";
+import ReactLoading from "react-loading";
+import ShowTotalCommit from "components/ShowTotalCommit";
 import ShowTodayCommit from "components/ShowTodayCommit";
+import ShowWeekCommit from "components/ShowWeekCommit";
 
 const Main = observer(() => {
   const { userInfo, handleUserData, getUserId } = stores.UserStore;
   const { data, loading, error } = useQuery(GET_GITHUB_API(getUserId()));
 
+  const history = useHistory();
+
   if (error) {
-    console.log(error);
+    localStorage.removeItem("userId");
+    history.push("/");
   }
 
   useEffect(() => {
@@ -31,6 +36,7 @@ const Main = observer(() => {
         <>
           <ShowTotalCommit />
           <ShowTodayCommit />
+          <ShowWeekCommit />
         </>
       ) : (
         <div className="main_loader">
@@ -46,4 +52,4 @@ const Main = observer(() => {
   );
 });
 
-export default Main;
+export default withRouter(Main);
