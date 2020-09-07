@@ -31,7 +31,7 @@ const notification = () => {
   const randomizeMessage = () => {
     switch (Math.floor(random * 7)) {
       case 0:
-        return "커밋 해";
+        return "커밋 해.";
       case 1:
         return "이봐 친구, 커밋은 밥 말아 처먹은거야?";
       case 2:
@@ -39,7 +39,7 @@ const notification = () => {
       case 3:
         return "커밋 해!!!!!!!!!!!!!!!";
       case 4:
-        return "커밋하라고오ㅓㅇㄱ롱곩ㅇ로옹옥ㅇ";
+        return "커밋하라고오ㅓㅇㄱ롱곩ㅇ로옹옥ㅇ!!";
       case 5:
         return "지금 당장 커밋을 하지 않으면 없애버리겠어.";
       case 6:
