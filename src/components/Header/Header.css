@@ -1,6 +1,8 @@
 .header_main {
   width: 100%;
   height: 3.6rem;
+  display: flex;
+  align-items: center;
   background-color: #24292e;
   border-bottom: 1.6px solid;
   border-color: #000000;
@@ -8,8 +10,9 @@
 
 .header_user {
   display: flex;
-  width: 14rem;
+  width: 15rem;
   height: 100%;
+  justify-content: space-between;
   align-items: center;
   margin-left: 0.8rem;
   border-right: 1.6px solid;
@@ -17,6 +20,11 @@
 }
 
 .header_profile {
+  display: flex;
+  align-items: center;
+}
+
+.header_avatar {
   border-radius: 20rem;
   width: 2rem;
   margin-right: 0.6rem;
@@ -35,6 +43,21 @@
 .header_bio {
   font-size: 0.7rem;
   font-weight: 100;
+}
+
+.logout_area {
+  display: flex;
+  align-items: center;
+}
+
+.header_logout {
+  width: 1rem;
+  margin: 0.2rem 0.6rem 0 0;
+}
+
+.loading_profile {
+  display: flex;
+  align-items: center;
 }
 
 .loading_image {

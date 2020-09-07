@@ -44,6 +44,12 @@ class UserStore {
   setWeekCommit = (commit) => {
     this.weekCommit = commit;
   };
+
+  @action
+  startLogout = () => {
+    localStorage.removeItem("userId");
+    window.location.reload(false);
+  };
 }
 
 export default UserStore;
