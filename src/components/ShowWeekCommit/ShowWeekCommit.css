@@ -5,8 +5,9 @@
   height: 10rem;
   margin: 1rem 1.2rem 0 1.2rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 8rem 0 8rem;
   align-items: center;
 }
 
