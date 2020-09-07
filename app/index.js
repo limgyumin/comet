@@ -8,6 +8,7 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 960,
     height: 660,
+    title: "Comet",
     titleBarStyle: "hiddenInset",
     resizable: false,
     webPreferences: {

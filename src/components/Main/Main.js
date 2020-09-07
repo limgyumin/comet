@@ -11,6 +11,7 @@ import ReactLoading from "react-loading";
 import ShowTotalCommit from "components/ShowTotalCommit";
 import ShowTodayCommit from "components/ShowTodayCommit";
 import ShowWeekCommit from "components/ShowWeekCommit";
+import notification from "../../lib/notification";
 
 const Main = observer(() => {
   const { userInfo, handleUserData, getUserId } = stores.UserStore;
@@ -26,6 +27,7 @@ const Main = observer(() => {
   useEffect(() => {
     if (!loading) {
       handleUserData(data);
+      notification();
     }
   }, [handleUserData, loading]);
 
