@@ -1,14 +1,27 @@
-.week_container {
+.week_area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.week_container,
+.week_container2 {
   border: 1px solid;
   border-radius: 1rem;
   border-color: #eeeeee;
+  width: 60%;
   height: 10rem;
-  margin: 1rem 1.2rem 0 1.2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0 8rem 0 8rem;
+  justify-content: center;
   align-items: center;
+}
+
+.week_container {
+  margin: 1rem 0.5rem 0 1.2rem;
+}
+
+.week_container2 {
+  margin: 1rem 1.2rem 0 0.5rem;
 }
 
 .week_title {
@@ -43,4 +56,11 @@
   font-weight: 400;
   margin-top: 0.3rem;
   color: #24292e;
+}
+
+.detach_line {
+  border-left: 1px solid;
+  border-color: #eeeeee;
+  width: 0;
+  height: 6rem;
 }
