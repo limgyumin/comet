@@ -1,0 +1,45 @@
+.week_container {
+  border: 1px solid;
+  border-radius: 1rem;
+  border-color: #eeeeee;
+  height: 10rem;
+  margin: 1rem 1.2rem 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.week_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #24292e;
+}
+
+.week_commit {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-right: 0.4rem;
+  margin-top: 0.3rem;
+  color: #24292e;
+}
+
+.week_count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #24292e;
+}
+
+.week_no_commit {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #24292e;
+}
+
+.week_unit {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 0.3rem;
+  color: #24292e;
+}

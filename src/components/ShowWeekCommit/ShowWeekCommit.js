@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import { observer } from "mobx-react";
 import stores from "../../stores";
+import "./ShowWeekCommit.css";
+
+import CountUp from "react-countup";
+import FadeIn from "react-fade-in";
 
 const ShowWeekCommit = observer(() => {
   const { userInfo, weekCommit, setWeekCommit } = stores.UserStore;
@@ -28,8 +32,16 @@ const ShowWeekCommit = observer(() => {
   }, [weekCommit]);
 
   return (
-    <div>
-      <h1>{weekCommit}</h1>
+    <div className="week_container">
+      <div className="week_title">
+        <h1 className="week_commit">이번 주 커밋</h1>
+        {weekCommit > 0 ? (
+          <CountUp end={weekCommit} className="week_count" />
+        ) : (
+          <h1 className="week_no_commit">{weekCommit}</h1>
+        )}
+        <h1 className="week_unit">회</h1>
+      </div>
     </div>
   );
 });
