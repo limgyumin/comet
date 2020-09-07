@@ -58,6 +58,11 @@
   color: #24292e;
 }
 
+.chart_icon {
+  width: 1.8rem;
+  margin: 0.6rem 0.3rem 0 0;
+}
+
 .detach_line {
   border-left: 1px solid;
   border-color: #eeeeee;
