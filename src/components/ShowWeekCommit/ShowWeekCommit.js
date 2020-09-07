@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { observer } from "mobx-react";
 import stores from "../../stores";
 
@@ -23,9 +23,13 @@ const ShowWeekCommit = observer(() => {
     });
   };
 
+  useEffect(() => {
+    getWeekCommit();
+  }, [weekCommit]);
+
   return (
     <div>
-      <h1>{commitCount}</h1>
+      <h1>{weekCommit}</h1>
     </div>
   );
 });
