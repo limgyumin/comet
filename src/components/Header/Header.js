@@ -18,7 +18,7 @@ const Header = observer(() => {
       <div className="header_user">
         {userInfo ? (
           <>
-            <img src={userInfo.avatarUrl} />
+            <img src={userInfo.avatarUrl} className="header_profile" />
             <div className="header_info">
               <p className="header_name">{userInfo.login}</p>
               <p className="header_bio">

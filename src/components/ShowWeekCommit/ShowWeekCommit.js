@@ -42,6 +42,15 @@ const ShowWeekCommit = observer(() => {
         )}
         <h1 className="week_unit">회</h1>
       </div>
+      <div className="week_title">
+        <h1 className="week_commit">이번 주 평균 커밋</h1>
+        {weekCommit > 0 ? (
+          <CountUp end={weekCommit / 7} className="week_count" />
+        ) : (
+          <h1 className="week_no_commit">{weekCommit}</h1>
+        )}
+        <h1 className="week_unit">회</h1>
+      </div>
     </div>
   );
 });

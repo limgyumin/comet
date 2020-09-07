@@ -14,18 +14,6 @@ const ShowTodayCommit = observer(() => {
     },
   } = userInfo;
 
-  const getTodayCommit = () => {
-    weeks.map((week, index) => {
-      if (index === weeks.length - 1) {
-        week.contributionDays.map((day, index2) => {
-          if (index2 === week.contributionDays.length - 1) {
-            setTodayCommit(day.contributionCount);
-          }
-        });
-      }
-    });
-  };
-
   const noCommit = {
     width: "100%",
     backgroundColor: "#FF5E5E",
@@ -38,6 +26,18 @@ const ShowTodayCommit = observer(() => {
   const complete = {
     width: "100%",
     backgroundColor: "#FFB300",
+  };
+
+  const getTodayCommit = () => {
+    weeks.map((week, index) => {
+      if (index === weeks.length - 1) {
+        week.contributionDays.map((day, index2) => {
+          if (index2 === week.contributionDays.length - 1) {
+            setTodayCommit(day.contributionCount);
+          }
+        });
+      }
+    });
   };
 
   useEffect(() => {
