@@ -32,30 +32,36 @@ const ShowWeekCommit = observer(() => {
   }, [weekCommit]);
 
   return (
-    <div className="week_area">
-      <div className="week_container">
-        <div className="week_title">
-          <h1 className="week_commit">이번 주 커밋</h1>
-          {weekCommit > 0 ? (
-            <CountUp end={weekCommit} className="week_count" />
-          ) : (
-            <h1 className="week_no_commit">{weekCommit}</h1>
-          )}
-          <h1 className="week_unit">회</h1>
+    <FadeIn>
+      <div className="week_area">
+        <div className="week_container">
+          <FadeIn>
+            <div className="week_title">
+              <h1 className="week_commit">이번 주 커밋</h1>
+              {weekCommit > 0 ? (
+                <CountUp end={weekCommit} className="week_count" />
+              ) : (
+                <h1 className="week_no_commit">{weekCommit}</h1>
+              )}
+              <h1 className="week_unit">회</h1>
+            </div>
+          </FadeIn>
+        </div>
+        <div className="week_container2">
+          <FadeIn>
+            <div className="week_title">
+              <h1 className="week_commit">이번 주 평균 커밋</h1>
+              {weekCommit > 0 ? (
+                <CountUp end={weekCommit / 7} className="week_count" />
+              ) : (
+                <h1 className="week_no_commit">{weekCommit}</h1>
+              )}
+              <h1 className="week_unit">회</h1>
+            </div>
+          </FadeIn>
         </div>
       </div>
-      <div className="week_container2">
-        <div className="week_title">
-          <h1 className="week_commit">이번 주 평균 커밋</h1>
-          {weekCommit > 0 ? (
-            <CountUp end={weekCommit / 7} className="week_count" />
-          ) : (
-            <h1 className="week_no_commit">{weekCommit}</h1>
-          )}
-          <h1 className="week_unit">회</h1>
-        </div>
-      </div>
-    </div>
+    </FadeIn>
   );
 });
 
