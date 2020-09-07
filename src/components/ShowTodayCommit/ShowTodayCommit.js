@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { observer } from "mobx-react";
 import stores from "../../stores";
+import notification from "../../lib/notification";
 import "./ShowTodayCommit.css";
 
 import CountUp from "react-countup";
 import FadeIn from "react-fade-in";
+import schedule from "node-schedule";
 
 const ShowTodayCommit = observer(() => {
   const { userInfo, todayCommit, setTodayCommit } = stores.UserStore;
@@ -40,8 +42,15 @@ const ShowTodayCommit = observer(() => {
     });
   };
 
+  schedule.scheduleJob("0 0 12,16,18 * * *", () => {
+    window.location.reload(false);
+  });
+
   useEffect(() => {
     getTodayCommit();
+    if (todayCommit === 0) {
+      notification();
+    }
   }, [todayCommit]);
 
   return (
