@@ -62,7 +62,6 @@ const InputData = observer(() => {
           size="small"
           onChange={(e) => {
             setId(e.target.value);
-            console.log(e.target.value);
           }}
         />
         <Link to="/main" className="button">

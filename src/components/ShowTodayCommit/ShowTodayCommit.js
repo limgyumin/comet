@@ -42,7 +42,7 @@ const ShowTodayCommit = observer(() => {
     });
   };
 
-  schedule.scheduleJob("0 0 12,16,18 * * *", () => {
+  schedule.scheduleJob("0 0 12,16,20 * * *", () => {
     window.location.reload(false);
   });
 
@@ -71,8 +71,10 @@ const ShowTodayCommit = observer(() => {
               <h3 className="today_bad">잔소리 알림 장전! 당장 커밋하세요!</h3>
             ) : todayCommit < 10 ? (
               <h3 className="today_great">훌륭해요! 이대로 쭉 갑시다!</h3>
-            ) : todayCommit < 20 ? (
-              <h3 className="today_complete">목표 달성 완료! 아주 잘했어요!</h3>
+            ) : todayCommit < 40 ? (
+              <h3 className="today_complete">
+                목표 달성 완료! 아주 잘했어요! 😉
+              </h3>
             ) : (
               <h3 className="today_tooMuch">세상에..... 😲</h3>
             )}
