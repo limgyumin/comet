@@ -8,7 +8,7 @@
   border-color: #000000;
 }
 
-.header_user {
+.header_area {
   display: flex;
   width: 15rem;
   height: 100%;
@@ -31,7 +31,9 @@
 }
 
 .header_name,
-.header_bio {
+.header_bio,
+.header_goal_title,
+.header_goal_subtitle {
   color: #ffffff;
 }
 
@@ -45,14 +47,40 @@
   font-weight: 100;
 }
 
-.logout_area {
-  display: flex;
-  align-items: center;
-}
-
 .header_logout {
   width: 1rem;
   margin: 0.2rem 0.6rem 0 0;
+  cursor: pointer;
+}
+
+.header_goal_area {
+  display: flex;
+  width: 15.4rem;
+  height: 100%;
+  align-items: center;
+  padding-left: 0.8rem;
+  border-right: 1.6px solid;
+  border-color: #000000;
+  cursor: pointer;
+}
+
+.header_goal_title {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.header_goal_subtitle {
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
+.header_goal_flag {
+  margin-right: 0.6rem;
+}
+
+.logout_area {
+  display: flex;
+  align-items: center;
 }
 
 .loading_profile {
