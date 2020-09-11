@@ -44,7 +44,12 @@ const Header = observer(() => {
               />
             </div>
           </div>
-          <div className="header_goal_area">
+          <div
+            className="header_goal_area"
+            onClick={() => {
+              alert("히힝");
+            }}
+          >
             <img src={flag} alt={flag} className="header_goal_flag" />
             <div className="header_goal_info">
               <p className="header_goal_title">하루 목표 커밋 설정</p>
