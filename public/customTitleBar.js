@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
     menu: null,
     titleHorizontalAlignment: "left",
     unfocusEffect: false,
+    overflow: "hidden",
   });
 
   const replaceText = (selector, text) => {

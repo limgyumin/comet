@@ -43,7 +43,7 @@ const InputData = observer(() => {
   const [id, setId] = useState("");
   const { handleUserId, setUserId } = stores.UserStore;
 
-  const onSubmit = useCallback(() => {
+  const submitUserId = useCallback(() => {
     handleUserId(id);
     setUserId(id);
   }, [id, handleUserId]);
@@ -65,7 +65,7 @@ const InputData = observer(() => {
           }}
         />
         <Link to="/main" className="button">
-          <ColorButton variant="contained" onClick={() => onSubmit()}>
+          <ColorButton variant="contained" onClick={() => submitUserId()}>
             완료
           </ColorButton>
         </Link>

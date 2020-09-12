@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="660" viewBox="0 0 480 660">
-  <g id="background" transform="translate(-480)">
-    <path id="패스_16" data-name="패스 16" d="M0,0H480V660H0Z" transform="translate(480)" fill="#24292e"/>
-    <g id="그룹_14" data-name="그룹 14" transform="translate(464 74)">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="660.413" viewBox="0 0 480 660.413">
+  <g id="background" transform="translate(-480 15.413)">
+    <path id="패스_16" data-name="패스 16" d="M0,0H480V660.413H0Z" transform="translate(480 -15.413)" fill="#24292e"/>
+    <g id="그룹_14" data-name="그룹 14" transform="translate(464 60)">
       <path id="패스_1" data-name="패스 1" d="M0,0,150.267,60.768v57L0,57Z" transform="translate(106 336)" fill="#fff"/>
       <path id="패스_2" data-name="패스 2" d="M150.267,0,0,60.768v57L150.267,57Z" transform="translate(256 336)" fill="#a1a1a1"/>
       <path id="패스_3" data-name="패스 3" d="M-.016-.984,150.267,60.768,300.3-.984,150.014-62.736Z" transform="translate(106 337)" fill="#bcbcbc"/>
     </g>
-    <g id="그룹_15" data-name="그룹 15" transform="translate(464 -3)">
+    <g id="그룹_15" data-name="그룹 15" transform="translate(464 -17)">
       <path id="패스_1-2" data-name="패스 1" d="M0,0,150.267,60.768v57L0,57Z" transform="translate(106 336)" fill="#fff"/>
       <path id="패스_2-2" data-name="패스 2" d="M150.267,0,0,60.768v57L150.267,57Z" transform="translate(256 336)" fill="#a1a1a1"/>
       <path id="패스_3-2" data-name="패스 3" d="M-.016-.984,150.267,60.768,300.3-.984,150.014-62.736Z" transform="translate(106 337)" fill="#bcbcbc"/>
     </g>
-    <g id="그룹_16" data-name="그룹 16" transform="translate(464 -144)">
+    <g id="그룹_16" data-name="그룹 16" transform="translate(464 -158)">
       <path id="패스_1-3" data-name="패스 1" d="M0,0,150.267,60.768v57L0,57Z" transform="translate(106 336)" fill="#6ec47c"/>
       <path id="패스_2-3" data-name="패스 2" d="M150.267,0,0,60.768v57L150.267,57Z" transform="translate(256 336)" fill="#4b9a58"/>
       <path id="패스_3-3" data-name="패스 3" d="M-.016-.984,150.267,60.768,300.3-.984,150.014-62.736Z" transform="translate(106 337)" fill="#9be9a8"/>
