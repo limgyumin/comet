@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   background-color: #24292e;
+  border-top: 1.6px solid;
   border-bottom: 1.6px solid;
   border-color: #000000;
 }
