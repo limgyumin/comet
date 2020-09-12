@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="comet-logo" transform="translate(0.426 0.426)">
+    <g id="사각형_40" data-name="사각형 40" transform="translate(-0.426 -0.426)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="64" height="64" stroke="none"/>
+      <rect x="0.5" y="0.5" width="63" height="63" fill="none"/>
+    </g>
+    <g id="그룹_24" data-name="그룹 24" transform="translate(2.234 7.289)">
+      <circle id="타원_3" data-name="타원 3" cx="16.432" cy="16.432" r="16.432" transform="translate(0 30.522) rotate(-45)" fill="#586067"/>
+      <rect id="사각형_13" data-name="사각형 13" width="27.998" height="6.077" rx="3.038" transform="translate(8.813 21.666) rotate(-45)" fill="#586067"/>
+      <rect id="사각형_20" data-name="사각형 20" width="45.142" height="6.077" rx="3.038" transform="translate(11.345 31.92) rotate(-45)" fill="#586067"/>
+      <rect id="사각형_21" data-name="사각형 21" width="41.196" height="6.077" rx="3.038" transform="translate(25.298 30.333) rotate(-45)" fill="#586067"/>
+      <rect id="사각형_22" data-name="사각형 22" width="29.753" height="6.077" rx="3.038" transform="translate(28.84 39.576) rotate(-45)" fill="#586067"/>
+      <path id="패스_13" data-name="패스 13" d="M9.651.618S8.229.678,8.228,1.892,9.651,3.314,9.651,3.314L0,4.074V0Z" transform="translate(35.398 15.545) rotate(-45)" fill="#586067"/>
+      <path id="패스_14" data-name="패스 14" d="M10.645.682s-1.5.155-1.5,1.494,1.5,1.479,1.5,1.479L0,4.494V0Z" transform="translate(22.826 15.274) rotate(-45)" fill="#586067"/>
+      <path id="패스_15" data-name="패스 15" d="M10.645.682s-1.5.155-1.5,1.494,1.5,1.479,1.5,1.479L0,4.494V0Z" transform="translate(35.391 27.861) rotate(-45)" fill="#586067"/>
+      <rect id="사각형_23" data-name="사각형 23" width="15.866" height="8.448" transform="translate(15.973 19.747) rotate(-45)" fill="#586067"/>
+      <rect id="사각형_25" data-name="사각형 25" width="31.988" height="8.448" transform="translate(14.721 32.558) rotate(-45)" fill="#586067"/>
+      <rect id="사각형_24" data-name="사각형 24" width="14.228" height="8.448" transform="translate(27.096 31.259) rotate(-45)" fill="#586067"/>
+    </g>
+    <circle id="타원_6" data-name="타원 6" cx="11.682" cy="11.682" r="11.682" transform="translate(8.951 37.811) rotate(-45)" fill="#fff"/>
+  </g>
+</svg>
