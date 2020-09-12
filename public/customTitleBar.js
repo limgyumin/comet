@@ -5,7 +5,10 @@ const customTitlebar = require("custom-electron-titlebar");
 window.addEventListener("DOMContentLoaded", () => {
   new customTitlebar.Titlebar({
     backgroundColor: customTitlebar.Color.fromHex("#24292e"),
-    icon: url.format(path.join(__dirname, "/images", "/icon.png")),
+    icon: url.format(path.join(__dirname, "/public", "/logo512.png")),
+    menu: null,
+    titleHorizontalAlignment: "left",
+    unfocusEffect: false,
   });
 
   const replaceText = (selector, text) => {

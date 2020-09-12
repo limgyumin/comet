@@ -11,6 +11,7 @@ const createWindow = () => {
     minWidth: 960,
     minHeight: 660,
     titleBarStyle: "hidden",
+    title: "Comet",
     frame: false,
     webPreferences: {
       nodeIntegration: true,
