@@ -8,9 +8,10 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 960,
     height: 660,
-    title: "Comet",
-    titleBarStyle: "hiddenInset",
-    resizable: false,
+    minWidth: 960,
+    minHeight: 660,
+    titleBarStyle: "hidden",
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
