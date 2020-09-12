@@ -11,17 +11,17 @@ const createWindow = () => {
     titleBarStyle: "hidden",
     title: "Comet",
     frame: false,
-    show: false,
+    //show: false,
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
     },
   });
 
-  mainWindow.on("ready-to-show", () => {
-    mainWindow.show();
-    mainWindow.removeMenu();
-  });
+  // mainWindow.on("ready-to-show", () => {
+  //   mainWindow.show();
+  //   mainWindow.removeMenu();
+  // });
 
   mainWindow.loadURL(
     isDev
