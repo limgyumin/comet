@@ -9,9 +9,7 @@ const Register = () => {
   return (
     <div className="register">
       {isStarted ? <InputData /> : <StartSection setIsStarted={setIsStarted} />}
-      <div className="background">
-        <img src={background} alt={background} />
-      </div>
+      <img src={background} alt={background} className="background" />
     </div>
   );
 };
