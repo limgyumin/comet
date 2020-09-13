@@ -6,18 +6,23 @@ let mainWindow;
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({
-    width: 960,
-    height: 660,
     minWidth: 960,
     minHeight: 660,
     titleBarStyle: "hidden",
     title: "Comet",
     frame: false,
+    //show: false,
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
     },
   });
+
+  // mainWindow.on("ready-to-show", () => {
+  //   mainWindow.show();
+  //   mainWindow.removeMenu();
+  // });
+
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
