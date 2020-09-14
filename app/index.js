@@ -1,8 +1,10 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu, Tray, nativeImage } = require("electron");
 const path = require("path");
 const isDev = require("electron-is-dev");
+const { session } = require("electron");
 
 let mainWindow;
+let tray = null;
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({
@@ -36,7 +38,39 @@ const createWindow = () => {
   });
 };
 
-app.on("ready", createWindow);
+const createTray = () => {
+  tray = new Tray(nativeImage.createEmpty());
+  tray.setImage(
+    nativeImage.createFromPath(path.join(__dirname, "assets", "logo.ico"))
+  );
+  tray.setToolTip("Tray is Working!");
+};
+
+const startServiceWorker = () => {
+  console.log(
+    "ServiceWorker: " + session.defaultSession.serviceWorkers.getAllRunning()
+  );
+  session.defaultSession.serviceWorkers.on(
+    "console-message",
+    (event, messageDetails) => {
+      console.log(
+        "Got service worker message",
+        messageDetails,
+        "from",
+        session.defaultSession.serviceWorkers.getFromVersionID(
+          messageDetails.versionId
+        )
+      );
+    }
+  );
+};
+
+app.on("ready", () => {
+  createWindow();
+  createTray();
+  startServiceWorker();
+});
+
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
