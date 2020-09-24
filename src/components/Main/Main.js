@@ -15,7 +15,6 @@ import ShowWeekCommit from "components/ShowWeekCommit";
 const Main = observer(() => {
   const { userInfo, handleUserData, getUserId } = stores.UserStore;
   const { data, loading, error } = useQuery(GET_GITHUB_API(getUserId()));
-
   const history = useHistory();
 
   if (error) {

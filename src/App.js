@@ -3,11 +3,11 @@ import "./App.css";
 import Register from "./components/Register";
 import Main from "./components/Main";
 import userIdVerification from "./lib/userIdVerification";
-import { BrowserRouter, Route, Redirect, Router } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Switch>
       <Route
         path="/main"
         render={() => {
@@ -25,7 +25,7 @@ function App() {
         }}
         exact={true}
       />
-    </BrowserRouter>
+    </Switch>
   );
 }
 
