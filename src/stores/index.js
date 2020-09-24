@@ -1,9 +1,9 @@
 import UserStore from "./UserStore";
-import SetGoalCommitStore from "./SetGoalCommitStore";
+import RegisterStore from "./Register/RegisterStore";
 
 const stores = {
   UserStore: new UserStore(),
-  SetGoalCommitStore: new SetGoalCommitStore(),
+  RegisterStore: new RegisterStore(),
 };
 
 export default stores;
