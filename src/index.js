@@ -7,12 +7,15 @@ import * as serviceWorker from "./serviceWorker";
 import stores from "./stores";
 import client from "./assets/api/client";
 import { ApolloProvider } from "react-apollo";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <ApolloProvider client={client}>
     <Provider store={stores}>
       <React.StrictMode>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </React.StrictMode>
     </Provider>
   </ApolloProvider>,
