@@ -9,22 +9,13 @@ function App() {
   return (
     <>
       <Switch>
-        <Route
-          path="/main"
-          render={() => {
-            return userIdVerification() ? <Main /> : <Redirect to={"/"} />;
-          }}
-        />
+        <Route path="/login" render={() => <Register />} />
         <Route
           path="/"
-          render={() => {
-            return userIdVerification() ? (
-              <Redirect to={"/main"} />
-            ) : (
-              <Register />
-            );
-          }}
           exact={true}
+          render={() => {
+            return userIdVerification() ? <Main /> : <Redirect to={"/login"} />;
+          }}
         />
       </Switch>
     </>

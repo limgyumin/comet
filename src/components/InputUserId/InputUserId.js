@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from "react";
-import "./InputData.css";
+import "./InputUserId.css";
 import { Button, TextField, withStyles } from "@material-ui/core";
 import FadeIn from "react-fade-in";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { observer } from "mobx-react";
 import stores from "../../stores";
 
@@ -39,13 +39,15 @@ const CssTextField = withStyles({
   },
 })(TextField);
 
-const InputData = observer(() => {
+const InputUserId = observer(() => {
   const [id, setId] = useState("");
   const { handleUserId, setUserId } = stores.UserStore;
+  const history = useHistory();
 
   const submitUserId = useCallback(() => {
     handleUserId(id);
     setUserId(id);
+    history.push("/");
   }, [id, handleUserId]);
 
   return (
@@ -64,14 +66,12 @@ const InputData = observer(() => {
             setId(e.target.value);
           }}
         />
-        <Link to="/main" className="button">
-          <ColorButton variant="contained" onClick={() => submitUserId()}>
-            완료
-          </ColorButton>
-        </Link>
+        <ColorButton variant="contained" onClick={() => submitUserId()}>
+          완료
+        </ColorButton>
       </FadeIn>
     </div>
   );
 });
 
-export default InputData;
+export default InputUserId;
