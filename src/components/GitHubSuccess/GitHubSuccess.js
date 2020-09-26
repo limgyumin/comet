@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./GitHubSuccess.css";
 import FadeIn from "react-fade-in";
 import ReactLoading from "react-loading";
+import { useLocation } from "react-router-dom";
 
 const GitHubSuccess = () => {
+  const location = useLocation();
+
+  const getUrlParams = () => {
+    var params = {};
+    location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, (str, key, value) => {
+      params[key] = value;
+    });
+    return params;
+  };
+
+  useEffect(() => {
+    const params = getUrlParams();
+    console.log(params.code);
+  }, []);
+
   return (
     <div className="GitHubSuccess">
       <FadeIn delay={200}>
