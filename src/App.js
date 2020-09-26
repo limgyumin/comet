@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import Register from "./components/Register";
 import Main from "./components/Main";
 import userIdVerification from "./lib/userIdVerification";
 import { Switch, Route, Redirect } from "react-router-dom";
