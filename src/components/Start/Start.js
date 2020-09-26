@@ -1,5 +1,5 @@
 import React from "react";
-import "./StartSection.css";
+import "./Start.css";
 import FadeIn from "react-fade-in";
 import { Button, withStyles } from "@material-ui/core";
 
@@ -18,7 +18,7 @@ const ColorButton = withStyles((theme) => ({
   },
 }))(Button);
 
-const StartSection = ({ setIsStarted }) => {
+const Start = ({ setIsStarted }) => {
   return (
     <div className="contents">
       <FadeIn>
@@ -39,4 +39,4 @@ const StartSection = ({ setIsStarted }) => {
   );
 };
 
-export default StartSection;
+export default Start;
