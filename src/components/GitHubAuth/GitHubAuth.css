@@ -3,7 +3,37 @@
   height: 100vh;
 }
 
-.GitHubAuth-WebView {
+.GitHubAuth-Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  border-bottom: 1px solid #c3c6c8;
+  z-index: 10;
+}
+
+.GitHubAuth-Header-Button {
+  display: flex;
+  position: absolute;
+  left: 0.8rem;
+  cursor: pointer;
+}
+
+.GitHubAuth-Header-Button-Before {
+  width: 0.7rem;
+  margin-right: 0.3rem;
+}
+
+.GitHubAuth-Header-Button-Text {
+  font-size: 1.1rem;
+}
+
+.GitHubAuth-Header-Title {
+  font-size: 1.2rem;
+}
+
+.GitHubAuth-Header-WebView {
   width: 100%;
-  height: auto;
+  height: 90vh;
+  display: flex;
 }
