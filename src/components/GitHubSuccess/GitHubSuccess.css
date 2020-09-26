@@ -1,1 +1,18 @@
-/* your css code */
+.GitHubSuccess {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.GitHubSuccess-Title {
+  font-size: 1rem;
+}
+
+.GitHubSuccess-Subtitle {
+  font-size: 0.8rem;
+  color: #757b81;
+}
