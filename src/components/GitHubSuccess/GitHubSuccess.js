@@ -4,7 +4,7 @@ import FadeIn from "react-fade-in";
 import ReactLoading from "react-loading";
 import { useLocation } from "react-router-dom";
 
-const GitHubSuccess = () => {
+const GitHubSuccess = ({ setCode }) => {
   const location = useLocation();
 
   const getUrlParams = () => {
@@ -18,6 +18,7 @@ const GitHubSuccess = () => {
   useEffect(() => {
     const params = getUrlParams();
     console.log(params.code);
+    setCode(params.code);
   }, []);
 
   return (

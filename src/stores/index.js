@@ -1,11 +1,11 @@
 import UserStore from "./UserStore";
-import RegisterStore from "./Register/RegisterStore";
 import GitHubStore from "./GitHub/GitHubStore";
+import UserInfoStore from "./UserInfo/UserInfoStore";
 
 const stores = {
   UserStore: new UserStore(),
-  RegisterStore: new RegisterStore(),
   GitHubStore: new GitHubStore(),
+  UserInfoStore: new UserInfoStore(),
 };
 
 export default stores;
