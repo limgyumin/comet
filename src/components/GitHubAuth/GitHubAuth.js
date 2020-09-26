@@ -1,7 +1,6 @@
 import React from "react";
 import "./GitHubAuth.css";
 import WebView from "react-electron-web-view";
-import "./GitHubAuth.css";
 import { OAUTH } from "../../config/config.json";
 
 const GitHubAuth = () => {
