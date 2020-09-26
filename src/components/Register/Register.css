@@ -1,14 +1,43 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.register {
+.Register {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  height: 100vh;
+  background-color: #fcfcfc;
 }
 
-.background {
-  height: 100vh;
+.Register-Text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2.6rem;
+}
+
+.Register-Text-Title {
+  font-weight: 400;
+  font-size: 2.6rem;
+}
+
+.Register-Text-Subtitle {
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.Register-GitHub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Register-GitHub-Icon {
+  width: 1.3rem;
+  margin-right: 0.6rem;
+}
+
+.Register-GitHub-Text {
+  font-weight: 400;
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  color: #757b81;
 }

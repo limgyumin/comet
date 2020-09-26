@@ -5,18 +5,22 @@ import FadeIn from "react-fade-in";
 import { useHistory } from "react-router-dom";
 import { observer } from "mobx-react";
 import stores from "../../stores";
+import github from "../../assets/images/github.svg";
 
 const ColorButton = withStyles((theme) => ({
   root: {
     boxShadow: "none",
-    color: theme.palette.getContrastText("#0080FF"),
+    color: theme.palette.getContrastText("#24292E"),
     fontFamily: "Noto Sans KR",
     fontWeight: 300,
-    backgroundColor: "#0080FF",
-    width: "8rem",
+    fontSize: "1rem",
+    letterSpacing: "0.6px",
+    backgroundColor: "#24292E",
+    width: "15.4rem",
+    height: "2.9rem",
     "&:hover": {
       boxShadow: "none",
-      backgroundColor: "#0080FF",
+      backgroundColor: "#24292E",
     },
   },
 }))(Button);
@@ -33,16 +37,30 @@ const Register = observer(() => {
   }, [id, handleUserId]);
 
   return (
-    <div className="contents">
-      <FadeIn>
-        <h1 className="big_title">시작하기 앞서서</h1>
-        <h3 className="small_title">
-          Comet은 당신의 GitHub 아이디를 필요로 합니다.
-        </h3>
-        <ColorButton variant="contained" onClick={() => submitUserId()}>
-          완료
-        </ColorButton>
-      </FadeIn>
+    <div className="Register">
+      <div className="Register-Text">
+        <FadeIn delay={300}>
+          <h1 className="Register-Text-Title">Hello, There!</h1>
+        </FadeIn>
+        <FadeIn delay={500}>
+          <h3 className="Register-Text-Subtitle">
+            Comet, 당신의 1일 1커밋을 도와드립니다.
+          </h3>
+        </FadeIn>
+      </div>
+      <div className="Register-GitHub">
+        <FadeIn delay={700}>
+          <ColorButton variant="contained" onClick={() => submitUserId()}>
+            <img src={github} alt={github} className="Register-GitHub-Icon" />
+            GitHub으로 로그인
+          </ColorButton>
+        </FadeIn>
+        <FadeIn delay={900}>
+          <p className="Register-GitHub-Text">
+            Comet을 사용하시려면 GitHub 계정이 필요합니다.
+          </p>
+        </FadeIn>
+      </div>
     </div>
   );
 });
