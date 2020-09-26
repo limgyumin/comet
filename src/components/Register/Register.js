@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import "./Register.css";
 import background from "../../assets/images/background.svg";
-import StartSection from "../StartSection/StartSection";
+import Start from "../Start/Start";
 import InputUserId from "../InputUserId/InputUserId";
 
 const Register = () => {
   const [isStarted, setIsStarted] = useState(false);
   return (
     <div className="register">
-      {isStarted ? (
-        <InputUserId />
-      ) : (
-        <StartSection setIsStarted={setIsStarted} />
-      )}
-      <img src={background} alt={background} className="background" />
+      {isStarted ? <InputUserId /> : <Start setIsStarted={setIsStarted} />}
     </div>
   );
 };
