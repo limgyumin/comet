@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./GitHubAuth.css";
 import WebView from "react-electron-web-view";
 import { OAUTH } from "../../config/config.json";
 import before from "../../assets/images/before.svg";
 import { useHistory } from "react-router-dom";
+import stores from "../../stores";
+import { observer } from "mobx-react";
 
-const GitHubAuth = () => {
+const GitHubAuth = observer(() => {
+  const { wait, success } = stores.UserInfoStore;
   const history = useHistory();
+
+  useEffect(() => {
+    console.log(success);
+    if (success) {
+      console.log(success);
+      history.push("/");
+    }
+  }, [success]);
+
   return (
     <div className="GitHubAuth">
       <div className="GitHubAuth-Header">
         <div
           className="GitHubAuth-Header-Button"
-          onClick={() => history.push("/")}
+          onClick={() => (wait ? null : history.push("/"))}
         >
           <img
             src={before}
@@ -26,6 +38,6 @@ const GitHubAuth = () => {
       <WebView src={OAUTH} className="GitHubAuth-Header-WebView" />
     </div>
   );
-};
+});
 
 export default GitHubAuth;
