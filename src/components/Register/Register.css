@@ -30,6 +30,10 @@
   align-items: center;
 }
 
+.Register-GitHub-Link {
+  text-decoration: none;
+}
+
 .Register-GitHub-Icon {
   width: 1.3rem;
   margin-right: 0.6rem;

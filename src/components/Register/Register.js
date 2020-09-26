@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import "./Register.css";
 import { Button, withStyles } from "@material-ui/core";
 import FadeIn from "react-fade-in";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { observer } from "mobx-react";
 import stores from "../../stores";
 import github from "../../assets/images/github.svg";
@@ -50,10 +50,12 @@ const Register = observer(() => {
       </div>
       <div className="Register-GitHub">
         <FadeIn delay={700}>
-          <ColorButton variant="contained" onClick={() => submitUserId()}>
-            <img src={github} alt={github} className="Register-GitHub-Icon" />
-            GitHub으로 로그인
-          </ColorButton>
+          <Link to="/auth" className="Register-GitHub-Link">
+            <ColorButton variant="contained" onClick={() => {}}>
+              <img src={github} alt={github} className="Register-GitHub-Icon" />
+              GitHub으로 로그인
+            </ColorButton>
+          </Link>
         </FadeIn>
         <FadeIn delay={900}>
           <p className="Register-GitHub-Text">
