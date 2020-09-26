@@ -4,7 +4,7 @@ import "./GitHubSuccess.css";
 const GitHubSuccess = () => {
   return (
     <div>
-      <h1>인증이 완료되었습니다.</h1>
+      <h3>인증이 완료되었습니다.</h3>
     </div>
   );
 };
