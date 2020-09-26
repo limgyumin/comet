@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 
 import { store } from "react-notifications-component";
 import "animate.css/animate.compat.css";
+import Register from "components/Register";
 
 const RegisterContainer = observer(() => {
   const [id, setId] = useState("");
@@ -35,7 +36,11 @@ const RegisterContainer = observer(() => {
       return error;
     }
   });
-  return <div></div>;
+  return (
+    <>
+      <Register />
+    </>
+  );
 });
 
 export default RegisterContainer;

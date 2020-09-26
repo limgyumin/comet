@@ -13,6 +13,7 @@ const createWindow = () => {
     frame: false,
     //show: false,
     webPreferences: {
+      webviewTag: true,
       nodeIntegration: true,
       enableRemoteModule: true,
     },
