@@ -40,6 +40,7 @@ const Register = observer(() => {
     <div className="Register">
       <div className="Register-Text">
         <FadeIn delay={300}>
+          {/*랜덤 타이틀 만들 예정 */}
           <h1 className="Register-Text-Title">Hello, There!</h1>
         </FadeIn>
         <FadeIn delay={500}>
