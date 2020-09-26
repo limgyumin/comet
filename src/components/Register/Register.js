@@ -1,16 +1,70 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./Register.css";
-import background from "../../assets/images/background.svg";
-import Start from "../Start/Start";
-import InputUserId from "../InputUserId/InputUserId";
+import { Button, withStyles } from "@material-ui/core";
+import FadeIn from "react-fade-in";
+import { Link, useHistory } from "react-router-dom";
+import { observer } from "mobx-react";
+import stores from "../../stores";
+import github from "../../assets/images/github.svg";
 
-const Register = () => {
-  const [isStarted, setIsStarted] = useState(false);
+const ColorButton = withStyles((theme) => ({
+  root: {
+    boxShadow: "none",
+    color: theme.palette.getContrastText("#24292E"),
+    fontFamily: "Noto Sans KR",
+    fontWeight: 300,
+    fontSize: "1rem",
+    letterSpacing: "0.6px",
+    backgroundColor: "#24292E",
+    width: "15.4rem",
+    height: "2.9rem",
+    "&:hover": {
+      boxShadow: "none",
+      backgroundColor: "#24292E",
+    },
+  },
+}))(Button);
+
+const Register = observer(() => {
+  const [id, setId] = useState("");
+  const { handleUserId, setUserId } = stores.UserStore;
+  const history = useHistory();
+
+  const submitUserId = useCallback(() => {
+    handleUserId(id);
+    setUserId(id);
+    history.push("/");
+  }, [id, handleUserId]);
+
   return (
-    <div className="register">
-      {isStarted ? <InputUserId /> : <Start setIsStarted={setIsStarted} />}
+    <div className="Register">
+      <div className="Register-Text">
+        <FadeIn delay={300}>
+          <h1 className="Register-Text-Title">Hello, There!</h1>
+        </FadeIn>
+        <FadeIn delay={500}>
+          <h3 className="Register-Text-Subtitle">
+            Comet, 당신의 1일 1커밋을 도와드립니다.
+          </h3>
+        </FadeIn>
+      </div>
+      <div className="Register-GitHub">
+        <FadeIn delay={700}>
+          <Link to="/auth" className="Register-GitHub-Link">
+            <ColorButton variant="contained" onClick={() => {}}>
+              <img src={github} alt={github} className="Register-GitHub-Icon" />
+              GitHub으로 로그인
+            </ColorButton>
+          </Link>
+        </FadeIn>
+        <FadeIn delay={900}>
+          <p className="Register-GitHub-Text">
+            Comet을 사용하시려면 GitHub 계정이 필요합니다.
+          </p>
+        </FadeIn>
+      </div>
     </div>
   );
-};
+});
 
 export default Register;
