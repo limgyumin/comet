@@ -2,6 +2,7 @@
   font-family: "Noto Sans KR";
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .App {
   text-align: center;
