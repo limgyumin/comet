@@ -3,8 +3,11 @@ import "./GitHubSuccess.css";
 import FadeIn from "react-fade-in";
 import ReactLoading from "react-loading";
 import { useLocation } from "react-router-dom";
+import stores from "../../stores";
+import { observer } from "mobx-react";
 
-const GitHubSuccess = ({ setCode }) => {
+const GitHubSuccess = observer(({ setCode }) => {
+  const { isWait } = stores.UserInfoStore;
   const location = useLocation();
 
   const getUrlParams = () => {
@@ -19,6 +22,7 @@ const GitHubSuccess = ({ setCode }) => {
     const params = getUrlParams();
     console.log(params.code);
     setCode(params.code);
+    isWait(true);
   }, []);
 
   return (
@@ -37,6 +41,6 @@ const GitHubSuccess = ({ setCode }) => {
       </FadeIn>
     </div>
   );
-};
+});
 
 export default GitHubSuccess;

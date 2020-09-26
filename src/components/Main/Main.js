@@ -4,7 +4,6 @@ import stores from "../../stores";
 import { useQuery } from "@apollo/react-hooks";
 import GET_GITHUB_API from "../../assets/api/gql/userInfoQuery";
 import { useHistory, withRouter } from "react-router-dom";
-import qs from "querystring";
 
 import "./Main.css";
 import Header from "components/Header";
@@ -24,10 +23,6 @@ const Main = observer(() => {
   }
 
   useEffect(() => {
-    const { code } = qs.parse(location.search, {
-      ignoreQueryPrefix: true,
-    });
-    console.log(code);
     if (!loading) {
       handleUserData(data);
     }
