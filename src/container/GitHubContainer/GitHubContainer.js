@@ -6,7 +6,7 @@ import GitHubSuccess from "components/GitHubSuccess";
 const GitHubContainer = observer(() => {
   const [code, setCode] = useState("");
   const { handleLogin } = stores.GitHubStore;
-  const { handleUserId, isSuccess } = stores.UserInfoStore;
+  const { handleUserInfo, isSuccess } = stores.UserInfoStore;
   const requestHandleLogin = useCallback(async () => {
     try {
       const response = await handleLogin(code);
@@ -14,7 +14,7 @@ const GitHubContainer = observer(() => {
       localStorage.setItem("userId", response.data["userId"]);
 
       console.log(response.data);
-      handleUserId(response.data);
+      handleUserInfo(response.data);
       isSuccess(true);
     } catch (error) {
       return error;

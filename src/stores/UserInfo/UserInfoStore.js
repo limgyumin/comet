@@ -8,7 +8,7 @@ class UserInfoStore {
   @observable success = false;
 
   @action
-  handleUserId = (userInfo) => {
+  handleUserInfo = (userInfo) => {
     this.userInfo = userInfo;
   };
   @action

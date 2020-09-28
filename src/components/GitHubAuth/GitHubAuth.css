@@ -34,8 +34,34 @@
   font-size: 1.2rem;
 }
 
-.GitHubAuth-Header-WebView {
-  width: 100%;
-  height: 90vh;
+.GitHubAuth-Login {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.GitHubAuth-Login-TextField {
+  display: flex;
+  flex-direction: column;
+}
+
+.GitHubAuth-Login-Button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.GitHubAuth-Login-Text {
+  font-weight: 400;
+  font-size: 0.7rem;
+  margin-top: 0.4rem;
+  color: #757b81;
+}
+
+.GitHubAuth-Login-Title {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 1.6rem;
 }

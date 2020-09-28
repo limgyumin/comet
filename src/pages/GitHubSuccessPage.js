@@ -1,6 +1,5 @@
-import GitHubSuccess from "components/GitHubSuccess";
-import GitHubContainer from "container/GitHubContainer/GitHubContainer";
 import React from "react";
+import GitHubContainer from "container/GitHubContainer/GitHubContainer";
 
 const GitHubSuccessPage = () => {
   return (
