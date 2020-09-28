@@ -1,18 +1,15 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import "./Register.css";
 import FadeIn from "react-fade-in";
-import { Link, useHistory } from "react-router-dom";
-import { observer } from "mobx-react";
-import stores from "../../stores";
+import { Link } from "react-router-dom";
 import github from "../../assets/images/github.svg";
-import BoxShadowButton from "../common/BoxShadowButton";
+import BoxShadowButton from "../common/materialUI/BoxShadowButton";
 
 const Register = ({ randomTitle }) => {
   return (
     <div className="Register">
       <div className="Register-Text">
         <FadeIn delay={300}>
-          {/*랜덤 타이틀 만들 예정 */}
           <h1 className="Register-Text-Title">{randomTitle()}</h1>
         </FadeIn>
         <FadeIn delay={500}>
