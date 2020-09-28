@@ -37,5 +37,6 @@ app.on("window-all-closed", () => {
 app.on("activate", () => {
   if (mainWindow === null) {
     createWindow();
+    createAuthWindow();
   }
 });
