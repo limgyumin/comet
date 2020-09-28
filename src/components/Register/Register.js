@@ -3,7 +3,7 @@ import "./Register.css";
 import FadeIn from "react-fade-in";
 import { Link } from "react-router-dom";
 import github from "../../assets/images/github.svg";
-import BoxShadowButton from "../common/BoxShadowButton";
+import BoxShadowButton from "../common/materialUI/BoxShadowButton";
 
 const Register = ({ randomTitle }) => {
   return (
