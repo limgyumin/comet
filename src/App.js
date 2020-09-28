@@ -18,7 +18,6 @@ function App() {
         />
         <Route path="/login" render={() => <Pages.RegisterPage />} />
         <Route path="/auth" render={() => <Pages.GitHubAuthPage />} />
-        <Route path="/success" render={() => <Pages.GitHubSuccessPage />} />
       </Switch>
     </>
   );
