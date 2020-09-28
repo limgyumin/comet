@@ -22,6 +22,22 @@ const GitHubAuthContainer = observer(() => {
     try {
       const response = await handleRegister(data);
 
+      if (response.status === 404) {
+        store.addNotification({
+          title: "승인 신청 실패!",
+          message: "존재하지 않는 GitHub 아이디 입니다.",
+          type: "danger",
+          insert: "top",
+          container: "top-right",
+          animationIn: ["animated", "headShake"],
+          animationOut: ["animated", "headShake"],
+          dismiss: {
+            duration: 5000,
+            onScreen: true,
+          },
+        });
+      }
+
       if (response.data["message"] === "new") {
         store.addNotification({
           title: "승인 신청 완료!",
@@ -52,24 +68,7 @@ const GitHubAuthContainer = observer(() => {
             onScreen: true,
           },
         });
-      }
-      // else {
-      //   store.addNotification({
-      //     title: "승인 신청 실패!",
-      //     message: "존재하지 않는 GitHub 아이디 입니다.",
-      //     type: "danger",
-      //     insert: "top",
-      //     container: "top-right",
-      //     animationIn: ["animated", "headShake"],
-      //     animationOut: ["animated", "headShake"],
-      //     dismiss: {
-      //       duration: 5000,
-      //       onScreen: true,
-      //     },
-      //   });
-      // }
-
-      if (
+      } else if (
         response.data["confirm"] === true &&
         response.data["message"] === "exist"
       ) {
