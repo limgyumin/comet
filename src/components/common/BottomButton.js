@@ -9,7 +9,7 @@ export default withStyles(() => ({
     letterSpacing: "0.6px",
     backgroundColor: "#191B1D",
     width: "100%",
-    height: "2.9rem",
+    height: "3.4rem",
     borderRadius: "0",
     boxShadow: "none",
     "&:hover": {
