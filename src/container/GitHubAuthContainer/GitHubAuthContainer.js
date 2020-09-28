@@ -21,6 +21,7 @@ const GitHubAuthContainer = observer(() => {
     };
     try {
       const response = await handleRegister(data);
+
       if (response.data["message"] === "new") {
         store.addNotification({
           title: "승인 신청 완료!",
