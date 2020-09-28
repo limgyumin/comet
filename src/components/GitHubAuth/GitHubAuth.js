@@ -1,14 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./GitHubAuth.css";
 import { useHistory } from "react-router-dom";
-import stores from "../../stores";
-import { observer } from "mobx-react";
 
 import before from "../../assets/images/before.svg";
-import CssTextField from "../common/CssTextField";
-import BottomButton from "../common/BottomButton";
+import CssTextField from "../common/materialUI/CssTextField";
+import BottomButton from "../common/materialUI/BottomButton";
 
-const GitHubAuth = observer(({ disable, onChange }) => {
+const GitHubAuth = ({
+  disable,
+  id,
+  name,
+  setName,
+  onIdChange,
+  requestHandleRegister,
+}) => {
   const history = useHistory();
 
   return (
@@ -36,20 +41,22 @@ const GitHubAuth = observer(({ disable, onChange }) => {
             label="이름"
             variant="outlined"
             size="small"
-            onChange={(e) => {}}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
           <CssTextField
             label="GitHub 아이디"
             variant="outlined"
             size="small"
-            onChange={(e) => onChange(e)}
+            value={id}
+            onChange={(e) => onIdChange(e)}
           />
         </div>
         <div className="GitHubAuth-Login-Button">
           <BottomButton
             variant="contained"
             disabled={disable}
-            onClick={() => {}}
+            onClick={() => requestHandleRegister()}
           >
             확인
           </BottomButton>
@@ -60,6 +67,6 @@ const GitHubAuth = observer(({ disable, onChange }) => {
       </div>
     </div>
   );
-});
+};
 
 export default GitHubAuth;
