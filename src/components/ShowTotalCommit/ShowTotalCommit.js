@@ -7,7 +7,7 @@ import FadeIn from "react-fade-in";
 const ShowTotalCommit = ({ totalCommit, goalCommit }) => {
   return (
     <>
-      {totalCommit && (
+      {totalCommit >= 0 && (
         <div className="total_container">
           <FadeIn>
             <div className="total_title">

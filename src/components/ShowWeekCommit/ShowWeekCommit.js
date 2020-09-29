@@ -9,7 +9,7 @@ import FadeIn from "react-fade-in";
 const ShowWeekCommit = ({ weekCommit, weekAvg }) => {
   return (
     <>
-      {weekAvg && (
+      {weekCommit >= 0 && (
         <FadeIn>
           <div className="week_area">
             <div className="week_container">
