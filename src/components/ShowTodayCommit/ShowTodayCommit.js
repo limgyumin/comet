@@ -21,7 +21,7 @@ const ShowTodayCommit = ({ todayCommit }) => {
 
   return (
     <>
-      {todayCommit && (
+      {todayCommit >= 0 && (
         <FadeIn>
           <div className="today_container">
             <FadeIn>
