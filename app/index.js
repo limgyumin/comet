@@ -12,11 +12,12 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     minWidth: 960,
     minHeight: 660,
-    titleBarStyle: "customButtonsOnHover",
+    titleBarStyle: "hidden",
     title: "Comet",
-    frame: true,
+    frame: false,
     //show: false,
     webPreferences: {
+      enableRemoteModule: true,
       nodeIntegration: true,
     },
   });
