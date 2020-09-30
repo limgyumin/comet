@@ -3,6 +3,7 @@ import stores from "../../stores";
 import { observer } from "mobx-react";
 import Main from "../../components/Main/Main";
 import { useHistory } from "react-router-dom";
+import schedule from "node-schedule";
 
 const MainContainer = observer(() => {
   const [userData, setUserData] = useState({});
@@ -14,6 +15,13 @@ const MainContainer = observer(() => {
       const response = await handleUserInfo(userId);
       if (response) {
         setUserData(response.data);
+        schedule.scheduleJob("0 0 8,10,12,14,16,18,20 * * *", () => {
+          if (response.data["today"] === 0) {
+            new Notification("커밋이 없습니다!");
+          } else {
+            return;
+          }
+        });
       }
     } catch (error) {
       return error;

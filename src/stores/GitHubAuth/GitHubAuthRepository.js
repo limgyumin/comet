@@ -13,7 +13,6 @@ class GitHubAuthRepository {
       const data = {
         status: 404,
       };
-      console.log(data);
       return data;
     }
   };

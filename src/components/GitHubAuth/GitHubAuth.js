@@ -30,7 +30,6 @@ const GitHubAuth = ({
           />
           <p className="GitHubAuth-Header-Button-Text">이전</p>
         </div>
-        <p className="GitHubAuth-Header-Title">시작하기</p>
       </div>
       <div className="GitHubAuth-Login">
         <h3 className="GitHubAuth-Login-Title">
