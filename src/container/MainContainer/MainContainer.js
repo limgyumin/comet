@@ -15,7 +15,7 @@ const MainContainer = observer(() => {
       const response = await handleUserInfo(userId);
       if (response) {
         setUserData(response.data);
-        schedule.scheduleJob("0 0 8,10,12,14,16,18,20 * * *", () => {
+        schedule.scheduleJob("0 1 8,10,12,14,16,18,20 * * *", () => {
           if (response.data["today"] === 0) {
             new Notification("커밋이 없습니다!");
           } else {
