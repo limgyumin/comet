@@ -13,20 +13,24 @@ const MainContainer = observer(() => {
     const userId = localStorage.getItem("userId");
     try {
       const response = await handleUserInfo(userId);
-      if (response) {
-        setUserData(response.data);
-        schedule.scheduleJob("0 1 8,10,12,14,16,18,20 * * *", () => {
-          if (response.data["today"] === 0) {
-            new Notification("커밋이 없습니다!");
-          } else {
-            return;
-          }
-        });
-      }
+      setUserData(response.data);
+      return response.data;
     } catch (error) {
       return error;
     }
-  }, []);
+  }, [userData]);
+
+  const scheduleNotify = () => {
+    schedule.scheduleJob("0 0 8,10,12,14,16,18,20 * * *", async () => {
+      if (localStorage.getItem("userId")) {
+        const data = await requestHandleUserInfo();
+        if (data.today === 0) {
+          new Notification("커밋이 없습니다!");
+        }
+        window.location.reload(); //특정시간에 페이지 refresh
+      }
+    });
+  };
 
   const sliceText = (string, maxLen) => {
     if (string.length > maxLen) {
@@ -50,6 +54,7 @@ const MainContainer = observer(() => {
   }
 
   useEffect(() => {
+    scheduleNotify();
     requestHandleUserInfo();
   }, []);
 
