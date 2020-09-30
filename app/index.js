@@ -10,7 +10,7 @@ let tray = null;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    minWidth: 960,
+    minWidth: 980,
     minHeight: 660,
     titleBarStyle: "hidden",
     title: "Comet",
@@ -22,7 +22,7 @@ function createWindow() {
     },
   });
 
-  mainWindow.setMenu(null);
+  // mainWindow.setMenu(null);
 
   mainWindow.loadURL(
     isDev

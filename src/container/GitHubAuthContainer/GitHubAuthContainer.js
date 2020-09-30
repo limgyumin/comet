@@ -73,9 +73,9 @@ const GitHubAuthContainer = observer(() => {
         response.data["message"] === "exist"
       ) {
         store.addNotification({
-          title: "승인 완료!",
+          title: "로그인 성공!",
           message: "이제 Comet을 이용해볼까요?",
-          type: "info",
+          type: "default",
           insert: "top",
           container: "top-right",
           animationIn: ["animated", "slideInRight"],
