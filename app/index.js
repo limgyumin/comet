@@ -4,7 +4,7 @@ const BrowserWindow = electron.BrowserWindow;
 const path = require("path");
 const isDev = require("electron-is-dev");
 
-let mainWindow;
+let mainWindow, workerWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -15,28 +15,41 @@ function createWindow() {
     frame: true,
     //show: false,
     webPreferences: {
-      webviewTag: true,
       nodeIntegration: true,
-      enableRemoteModule: true,
     },
   });
+
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
       : `file://${path.join(__dirname, "../build/index.html")}`
   );
-  mainWindow.on("closed", () => (mainWindow = null));
+
+  mainWindow.on("closed", () => {
+    mainWindow == null;
+  });
+}
+
+function createWorker() {
+  workerWindow = new BrowserWindow({
+    show: false,
+    webPreferences: { nodeIntegration: true },
+  });
+  workerWindow.loadURL(
+    isDev
+      ? "http://localhost:3000"
+      : `file://${path.join(__dirname, "../build/index.html")}`
+  );
 }
 
 app.on("ready", createWindow);
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
-    app.quit();
+    createWorker();
   }
 });
 app.on("activate", () => {
   if (mainWindow === null) {
     createWindow();
-    createAuthWindow();
   }
 });
