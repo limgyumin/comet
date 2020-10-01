@@ -1,99 +1,49 @@
-.today_container {
-  border: 1px solid;
-  border-radius: 1rem;
-  border-color: #eeeeee;
-  height: 13rem;
-  margin: 1rem 1.2rem 0 1.2rem;
+.ShowToday {
+  width: 48vh;
+  height: 28vh;
+  background-color: #191b1d;
+  border-radius: 1.6rem;
+}
+
+.ShowToday-Header {
+  display: flex;
+  padding: 1.2rem 0 0 1.5rem;
+  align-items: center;
+}
+
+.ShowToday-Header-Icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ShowToday-Header-Icon > img {
+  width: 2.2rem;
+}
+
+.ShowToday-Header-Icon > p {
+  position: absolute;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+.ShowToday-Header-Text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-left: 0.8rem;
 }
 
-.today_title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #24292e;
+.ShowToday-Header-Text > p {
+  color: #ffffff;
 }
 
-.today_commit {
-  font-size: 1.6rem;
+.ShowToday-Header-Text-Title {
+  font-size: 0.7rem;
+  font-weight: 200;
+}
+
+.ShowToday-Header-Text-SubTitle {
+  font-size: 0.8rem;
   font-weight: 400;
-  margin-right: 0.4rem;
-  margin-top: 0.3rem;
-  color: #24292e;
-}
-
-.today_count {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #24292e;
-}
-
-.today_no_commit {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #24292e;
-}
-
-.today_unit {
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin-top: 0.3rem;
-  color: #24292e;
-}
-
-.today_comment {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.today_great {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #0080ff;
-}
-
-.today_bad {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #ff5e5e;
-}
-
-.today_complete {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #ffb300;
-}
-
-.today_tooMuch {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #757b81;
-}
-
-.progress_bar {
-  width: 30rem;
-  height: 0.7rem;
-  background-color: #b4d9ff;
-  border-radius: 10rem;
-}
-
-.inside_bar {
-  width: 0;
-  height: 100%;
-  margin-top: 1rem;
-  background-color: #0080ff;
-  border-radius: 10rem;
-}
-
-.max_commit {
-  display: block;
-  width: 30rem;
-  text-align: center;
-  font-size: 1rem;
-  color: #a0a1a2;
-  margin-top: 0.4rem;
 }

@@ -16,6 +16,7 @@ const Main = observer(
     totalCommit,
     goalCommit,
     todayCommit,
+    todayChange,
     weekCommit,
     weekAvg,
     sliceText,
@@ -30,10 +31,13 @@ const Main = observer(
             bio={bio}
             logout={logout}
             sliceText={sliceText}
+          /> */}
+          {/* <ShowTotalCommit totalCommit={totalCommit} goalCommit={goalCommit} /> */}
+          <ShowTodayCommit
+            todayCommit={todayCommit}
+            todayChange={todayChange}
           />
-          <ShowTotalCommit totalCommit={totalCommit} goalCommit={goalCommit} />
-          <ShowTodayCommit todayCommit={todayCommit} />
-          <ShowWeekCommit weekCommit={weekCommit} weekAvg={weekAvg} /> */}
+          {/* <ShowWeekCommit weekCommit={weekCommit} weekAvg={weekAvg} /> */}
         </MainArea>
       </>
     );
