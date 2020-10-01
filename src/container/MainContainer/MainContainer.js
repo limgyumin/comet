@@ -67,6 +67,7 @@ const MainContainer = observer(() => {
         totalCommit={userData.total}
         goalCommit={goalCommit}
         todayCommit={userData.today}
+        todayChange={userData.todayChange}
         weekCommit={userData.week}
         weekAvg={userData.weekAvg}
         sliceText={sliceText}

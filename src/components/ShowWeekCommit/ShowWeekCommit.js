@@ -1,7 +1,7 @@
 import React from "react";
 import "./ShowWeekCommit.css";
-import chart from "../../assets/images/chart.svg";
-import barChart from "../../assets/images/bar-chart.svg";
+import chart from "../../assets/icons/chart.svg";
+import barChart from "../../assets/icons/bar-chart.svg";
 
 import CountUp from "react-countup";
 import FadeIn from "react-fade-in";
