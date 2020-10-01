@@ -3,7 +3,7 @@ import "./GitHubAuth.css";
 import { useHistory } from "react-router-dom";
 
 import FadeIn from "react-fade-in";
-import before from "../../assets/images/before.svg";
+import before from "../../assets/icons/before.svg";
 import CssTextField from "../common/materialUI/CssTextField";
 import BottomButton from "../common/materialUI/BottomButton";
 

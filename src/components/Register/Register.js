@@ -2,7 +2,7 @@ import React from "react";
 import "./Register.css";
 import FadeIn from "react-fade-in";
 import { Link } from "react-router-dom";
-import github from "../../assets/images/github.svg";
+import github from "../../assets/icons/github.svg";
 import BoxShadowButton from "../common/materialUI/BoxShadowButton";
 
 const Register = ({ randomTitle }) => {
@@ -21,7 +21,7 @@ const Register = ({ randomTitle }) => {
       <div className="Register-GitHub">
         <FadeIn delay={500}>
           <Link to="/auth" className="Register-GitHub-Link">
-            <BoxShadowButton variant="contained" onClick={() => {}}>
+            <BoxShadowButton variant="contained">
               <img src={github} alt={github} className="Register-GitHub-Icon" />
               GitHub 아이디로 시작
             </BoxShadowButton>

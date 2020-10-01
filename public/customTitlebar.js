@@ -4,7 +4,7 @@ const customTitlebar = require("custom-electron-titlebar");
 
 window.addEventListener("DOMContentLoaded", () => {
   new customTitlebar.Titlebar({
-    backgroundColor: customTitlebar.Color.fromHex("#fcfcfc"),
+    backgroundColor: customTitlebar.Color.fromHex("#ffffff"),
     menu: null,
     titleHorizontalAlignment: "left",
     unfocusEffect: false,
