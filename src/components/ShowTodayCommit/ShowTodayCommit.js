@@ -9,6 +9,12 @@ import CountUp from "react-countup";
 
 const ShowTodayCommit = ({ todayCommit, todayChange }) => {
   const date = new Date();
+  const progress = {
+    width: `${todayCommit * 10}%`,
+  };
+  const complete = {
+    width: "100%",
+  };
   return (
     <>
       {todayCommit >= 0 && (
@@ -32,14 +38,22 @@ const ShowTodayCommit = ({ todayCommit, todayChange }) => {
                 delay={0.1}
                 className="ShowToday-Header-Content-State-Count"
               />
-              {todayChange && (
+              {todayChange > 0 && (
                 <div className="ShowToday-Header-Content-State-Change">
                   <img src={up} alt={up} />
                   <p>{todayChange}</p>
                 </div>
               )}
             </div>
-            <div className="ShowToday-Header-Content-ProgressBar"></div>
+            <div className="ShowToday-Header-Content-ProgressBar">
+              <div
+                className="ShowToday-Header-Content-ProgressBar-Inside"
+                style={todayCommit >= 10 ? complete : progress}
+              ></div>
+            </div>
+            <p className="ShowToday-Header-Content-Message">
+              {todayCommit >= 10 ? "완료!" : `${todayCommit} / 10`}
+            </p>
           </div>
         </div>
       )}
