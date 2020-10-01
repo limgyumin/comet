@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
-import door from "../../assets/images/logout.svg";
-import flag from "../../assets/images/flag.svg";
+import door from "../../assets/icons/logout.svg";
+import flag from "../../assets/icons/flag.svg";
 
 const Header = ({ profile, name, bio, logout, sliceText }) => {
   return (
