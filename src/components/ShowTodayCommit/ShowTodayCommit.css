@@ -3,6 +3,8 @@
   height: 28vh;
   background-color: #191b1d;
   border-radius: 1.6rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .ShowToday-Header {
@@ -46,4 +48,46 @@
 .ShowToday-Header-Text-SubTitle {
   font-size: 0.8rem;
   font-weight: 400;
+}
+
+.ShowToday-Header-Content {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ShowToday-Header-Content-State {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.ShowToday-Header-Content-State-Count {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.ShowToday-Header-Content-State-Change {
+  width: 2.2rem;
+  height: 1.2rem;
+  border-radius: 0.4rem;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem 0 0 0.4rem;
+}
+
+.ShowToday-Header-Content-State-Change > img {
+  width: 0.5rem;
+  margin-right: 0.1rem;
+}
+
+.ShowToday-Header-Content-State-Change > p {
+  font-size: 0.8rem;
+  color: #191b1d;
 }
