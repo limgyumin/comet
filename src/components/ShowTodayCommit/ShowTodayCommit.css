@@ -1,13 +1,16 @@
 .ShowToday {
-  width: 48vh;
+  width: 50vh;
   height: 28vh;
   background-color: #191b1d;
   border-radius: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0px 43px 60px -13px rgba(0, 0, 0, 0.43);
 }
 
 .ShowToday-Header {
   display: flex;
-  padding: 1.2rem 0 0 1.5rem;
   align-items: center;
 }
 
@@ -39,11 +42,77 @@
 }
 
 .ShowToday-Header-Text-Title {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 200;
+  letter-spacing: 0.8px;
 }
 
 .ShowToday-Header-Text-SubTitle {
   font-size: 0.8rem;
   font-weight: 400;
+}
+
+.ShowToday-Header-Content {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ShowToday-Header-Content-State {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.1rem;
+}
+
+.ShowToday-Header-Content-State-Count {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.ShowToday-Header-Content-State-Change {
+  width: 2.2rem;
+  height: 1.2rem;
+  border-radius: 0.4rem;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem 0 0 0.4rem;
+}
+
+.ShowToday-Header-Content-State-Change > img {
+  width: 0.5rem;
+  margin-right: 0.1rem;
+}
+
+.ShowToday-Header-Content-State-Change > p {
+  font-size: 0.8rem;
+  color: #191b1d;
+}
+
+.ShowToday-Header-Content-ProgressBar {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 2rem;
+  background-color: #484a4d;
+  margin-top: 0.5rem;
+}
+
+.ShowToday-Header-Content-ProgressBar-Inside {
+  width: 0;
+  height: 0.5rem;
+  border-radius: 2rem;
+  background-color: #ffffff;
+}
+
+.ShowToday-Header-Content-Message {
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
 }
