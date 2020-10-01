@@ -25,18 +25,16 @@ const Main = observer(
     return (
       <>
         <MainArea name={name}>
-          {/* <Header
-            profile={profile}
-            name={name}
-            bio={bio}
-            logout={logout}
-            sliceText={sliceText}
-          /> */}
-          {/* <ShowTotalCommit totalCommit={totalCommit} goalCommit={goalCommit} /> */}
-          <ShowTodayCommit
-            todayCommit={todayCommit}
-            todayChange={todayChange}
-          />
+          <div className="Main-FirstLine">
+            <ShowTodayCommit
+              todayCommit={todayCommit}
+              todayChange={todayChange}
+            />
+            <ShowTotalCommit
+              totalCommit={totalCommit}
+              goalCommit={goalCommit}
+            />
+          </div>
           {/* <ShowWeekCommit weekCommit={weekCommit} weekAvg={weekAvg} /> */}
         </MainArea>
       </>
