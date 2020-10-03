@@ -26,7 +26,7 @@ const Main = observer(
     return (
       <>
         <MainArea name={name}>
-          <FadeIn delay={400}>
+          <FadeIn delay={200}>
             <div className="Main-FirstLine">
               <ShowTodayCommit
                 todayCommit={todayCommit}
