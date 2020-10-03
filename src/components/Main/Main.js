@@ -1,6 +1,7 @@
 import React from "react";
 import { observer } from "mobx-react";
 
+import FadeIn from "react-fade-in";
 import "./Main.css";
 import Header from "components/Header";
 import ShowTotalCommit from "components/ShowTotalCommit";
@@ -25,16 +26,18 @@ const Main = observer(
     return (
       <>
         <MainArea name={name}>
-          <div className="Main-FirstLine">
-            <ShowTodayCommit
-              todayCommit={todayCommit}
-              todayChange={todayChange}
-            />
-            <ShowTotalCommit
-              totalCommit={totalCommit}
-              goalCommit={goalCommit}
-            />
-          </div>
+          <FadeIn delay={200}>
+            <div className="Main-FirstLine">
+              <ShowTodayCommit
+                todayCommit={todayCommit}
+                todayChange={todayChange}
+              />
+              <ShowTotalCommit
+                totalCommit={totalCommit}
+                goalCommit={goalCommit}
+              />
+            </div>
+          </FadeIn>
           {/* <ShowWeekCommit weekCommit={weekCommit} weekAvg={weekAvg} /> */}
         </MainArea>
       </>

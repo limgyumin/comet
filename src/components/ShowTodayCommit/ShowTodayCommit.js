@@ -2,19 +2,29 @@ import React from "react";
 import "./ShowTodayCommit.css";
 import calendar from "../../assets/icons/calendar.svg";
 import up from "../../assets/icons/up.svg";
+import styled, { keyframes } from "styled-components";
 
-import FadeIn from "react-fade-in";
 import moment from "moment";
 import CountUp from "react-countup";
 
 const ShowTodayCommit = ({ todayCommit, todayChange }) => {
-  const date = new Date();
-  const progress = {
-    width: `${todayCommit * 10}%`,
-  };
-  const complete = {
-    width: "100%",
-  };
+  const calculatedCommit = todayCommit >= 10 ? 100 : todayCommit * 10;
+  const animate = keyframes`
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: ${calculatedCommit}%;
+    }
+  `;
+  const Progress = styled.div`
+    width: ${calculatedCommit}%;
+    height: 0.5rem;
+    border-radius: 2rem;
+    background-color: #ffffff;
+    animation: ${animate};
+    animation-duration: 1.8s;
+  `;
   return (
     <>
       {todayCommit >= 0 && (
@@ -46,10 +56,11 @@ const ShowTodayCommit = ({ todayCommit, todayChange }) => {
               )}
             </div>
             <div className="ShowToday-Header-Content-ProgressBar">
-              <div
+              {/* <div
                 className="ShowToday-Header-Content-ProgressBar-Inside"
                 style={todayCommit >= 10 ? complete : progress}
-              ></div>
+              ></div> */}
+              <Progress />
             </div>
             <p className="ShowToday-Header-Content-Message">
               {todayCommit < 40

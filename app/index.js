@@ -38,7 +38,7 @@ function createWindow() {
 function createWorker() {
   workerWindow = new BrowserWindow({
     show: false,
-    webPreferences: { nodeIntegration: true },
+    webPreferences: { nodeIntegration: true, enableRemoteModule: true },
   });
   workerWindow.loadURL(
     isDev
