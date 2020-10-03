@@ -3,7 +3,6 @@ import "./ShowTodayCommit.css";
 import calendar from "../../assets/icons/calendar.svg";
 import up from "../../assets/icons/up.svg";
 
-import FadeIn from "react-fade-in";
 import moment from "moment";
 import CountUp from "react-countup";
 
