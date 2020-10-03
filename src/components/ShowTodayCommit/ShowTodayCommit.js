@@ -52,7 +52,11 @@ const ShowTodayCommit = ({ todayCommit, todayChange }) => {
               ></div>
             </div>
             <p className="ShowToday-Header-Content-Message">
-              {todayCommit >= 10 ? "완료!" : `${todayCommit} / 10`}
+              {todayCommit < 40
+                ? todayCommit >= 10
+                  ? "완료!"
+                  : `${todayCommit} / 10`
+                : "세상에... 🙄"}
             </p>
           </div>
         </div>
