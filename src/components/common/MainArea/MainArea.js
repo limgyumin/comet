@@ -47,11 +47,14 @@ const MainArea = ({ children, profile, name, bio }) => {
       </FadeIn>
       <div className="MainArea-Side">
         <div className="MainArea-Side-Profile">
-          <img
-            src={profile}
-            alt={profile}
-            className="MainArea-Side-Profile-Image"
-          />
+          <div className="MainArea-Side-Profile-Header">
+            <img
+              src={profile}
+              alt={profile}
+              className="MainArea-Side-Profile-Header-Image"
+            />
+            <div className="MainArea-Side-Profile-Header-Button"></div>
+          </div>
           <div className="MainArea-Side-Profile-Info">
             <p className="MainArea-Side-Profile-Info-Name">{name}</p>
             <p className="MainArea-Side-Profile-Info-Bio">{bio}</p>

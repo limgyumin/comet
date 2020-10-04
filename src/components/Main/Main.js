@@ -20,7 +20,6 @@ const Main = observer(
     todayChange,
     weekCommit,
     weekAvg,
-    sliceText,
     logout,
   }) => {
     return (
