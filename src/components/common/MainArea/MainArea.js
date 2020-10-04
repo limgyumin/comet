@@ -4,7 +4,7 @@ import LightButton from "../../common/materialUI/LightButton";
 import refresh from "../../../assets/icons/refresh.svg";
 import FadeIn from "react-fade-in";
 
-const MainArea = ({ children, name }) => {
+const MainArea = ({ children, profile, name, bio }) => {
   return (
     <div className="MainArea">
       <FadeIn delay={100}>
@@ -45,6 +45,19 @@ const MainArea = ({ children, name }) => {
           {children}
         </div>
       </FadeIn>
+      <div className="MainArea-Side">
+        <div className="MainArea-Side-Profile">
+          <img
+            src={profile}
+            alt={profile}
+            className="MainArea-Side-Profile-Image"
+          />
+          <div className="MainArea-Side-Profile-Info">
+            <p className="MainArea-Side-Profile-Info-Name">{name}</p>
+            <p className="MainArea-Side-Profile-Info-Bio">{bio}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

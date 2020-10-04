@@ -25,7 +25,7 @@ const Main = observer(
   }) => {
     return (
       <>
-        <MainArea name={name}>
+        <MainArea profile={profile} name={name} bio={bio}>
           <FadeIn delay={200}>
             <div className="Main-FirstLine">
               <ShowTodayCommit
