@@ -32,14 +32,6 @@ const MainContainer = observer(() => {
     });
   };
 
-  const sliceText = (string, maxLen) => {
-    if (string.length > maxLen) {
-      return string.slice(0, maxLen) + "...";
-    } else {
-      return string;
-    }
-  };
-
   const logout = () => {
     localStorage.removeItem("userId");
     history.push("/");
@@ -70,7 +62,6 @@ const MainContainer = observer(() => {
         todayChange={userData.todayChange}
         weekCommit={userData.week}
         weekAvg={userData.weekAvg}
-        sliceText={sliceText}
         logout={logout}
       />
     </>

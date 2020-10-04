@@ -20,12 +20,11 @@ const Main = observer(
     todayChange,
     weekCommit,
     weekAvg,
-    sliceText,
     logout,
   }) => {
     return (
       <>
-        <MainArea name={name}>
+        <MainArea profile={profile} name={name} bio={bio}>
           <FadeIn delay={200}>
             <div className="Main-FirstLine">
               <ShowTodayCommit
