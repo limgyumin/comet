@@ -10,7 +10,7 @@ let tray = null;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    minWidth: 980,
+    minWidth: 960,
     minHeight: 660,
     titleBarStyle: "hidden",
     title: "Comet",
