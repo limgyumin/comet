@@ -1,5 +1,5 @@
 import React from "react";
-import "./ShowTotalCommit.css";
+import "./ShowTotalCommit.scss";
 import barChart from "../../assets/icons/bar-chart.svg";
 import AnimatedProgressProvider from "../common/Animated/AnimatedProgressProvider";
 import { easeQuadInOut } from "d3-ease";

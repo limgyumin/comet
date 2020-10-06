@@ -1,5 +1,5 @@
 import React from "react";
-import "./ShowWeekCommit.css";
+import "./ShowWeekCommit.scss";
 import chart from "../../assets/icons/chart.svg";
 
 import CountUp from "react-countup";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainArea.css";
+import "./MainArea.scss";
 import LightButton from "../materialUI/LightButton";
 import refresh from "../../../assets/icons/refresh.svg";
 import door from "../../../assets/icons/logout.svg";

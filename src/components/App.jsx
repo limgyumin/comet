@@ -1,6 +1,6 @@
 import React from "react";
-import "./App.css";
-import userIdVerification from "./lib/userIdVerification";
+import "../styles/App.scss";
+import userIdVerification from "../lib/userIdVerification";
 import { Switch, Route, Redirect } from "react-router-dom";
 import * as Pages from "pages";
 

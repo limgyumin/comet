@@ -1,5 +1,5 @@
 import React from "react";
-import "./ShowTodayCommit.css";
+import "./ShowTodayCommit.scss";
 import calendar from "../../assets/icons/calendar.svg";
 import up from "../../assets/icons/up.svg";
 import styled, { keyframes } from "styled-components";

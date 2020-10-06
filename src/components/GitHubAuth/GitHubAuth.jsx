@@ -1,5 +1,5 @@
 import React from "react";
-import "./GitHubAuth.css";
+import "./GitHubAuth.scss";
 import { useHistory } from "react-router-dom";
 
 import FadeIn from "react-fade-in";

@@ -2,8 +2,7 @@ import React from "react";
 import { observer } from "mobx-react";
 
 import FadeIn from "react-fade-in";
-import "./Main.css";
-import Header from "components/Header";
+import "./Main.scss";
 import ShowTotalCommit from "components/ShowTotalCommit";
 import ShowTodayCommit from "components/ShowTodayCommit";
 import ShowWeekCommit from "components/ShowWeekCommit";
