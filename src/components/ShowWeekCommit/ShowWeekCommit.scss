@@ -1,0 +1,29 @@
+.ShowWeek {
+  width: 52vh;
+  height: 36vh;
+  background-color: #ffffff;
+  border-radius: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  z-index: 10;
+  margin-top: 1.2rem;
+  /* margin: 0 0 2rem 1.6rem; */
+
+  &-Header {
+    display: flex;
+    align-items: center;
+
+    & > img {
+      width: 1.6rem;
+      margin-right: 0.3rem;
+    }
+
+    &-Title {
+      color: #191b1d;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+}

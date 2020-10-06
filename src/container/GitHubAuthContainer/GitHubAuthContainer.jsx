@@ -68,10 +68,7 @@ const GitHubAuthContainer = observer(() => {
             onScreen: true,
           },
         });
-      } else if (
-        response.data["confirm"] === true &&
-        response.data["message"] === "exist"
-      ) {
+      } else if (response.data["confirm"] === true) {
         store.addNotification({
           title: "로그인 성공!",
           message: "이제 Comet을 이용해볼까요?",

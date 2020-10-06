@@ -27,8 +27,8 @@ const MainContainer = observer(() => {
         if (data.today === 0) {
           new Notification("커밋이 없습니다!");
         }
-        window.location.reload(); //특정시간에 페이지 refresh
       }
+      window.location.reload(); //특정시간에 페이지 refresh
     });
   };
 
@@ -37,12 +37,18 @@ const MainContainer = observer(() => {
     history.push("/");
   };
 
-  let goalCommit = 0;
+  let intention = 0;
 
   if (userData.total < 100) {
-    goalCommit = Math.ceil(userData.total / 10) * 10;
+    const calculated =
+      userData.total % 10 === 0 ? userData.total / 10 + 1 : userData.total / 10;
+    intention = Math.ceil(calculated) * 10;
   } else {
-    goalCommit = Math.ceil(userData.total / 100) * 100;
+    const calculated =
+      userData.total % 100 === 0
+        ? userData.total / 100 + 1
+        : userData.total / 100;
+    intention = Math.ceil(calculated) * 100;
   }
 
   useEffect(() => {
@@ -52,18 +58,20 @@ const MainContainer = observer(() => {
 
   return (
     <>
-      <Main
-        profile={userData.profile}
-        name={userData.name}
-        bio={userData.bio}
-        totalCommit={userData.total}
-        goalCommit={goalCommit}
-        todayCommit={userData.today}
-        todayChange={userData.todayChange}
-        weekCommit={userData.week}
-        weekAvg={userData.weekAvg}
-        logout={logout}
-      />
+      {userData && (
+        <Main
+          profile={userData.profile}
+          name={userData.name}
+          bio={userData.bio}
+          total={userData.total}
+          intention={intention}
+          today={userData.today}
+          todayChange={userData.todayChange}
+          week={userData.week}
+          weekAvg={userData.weekAvg}
+          logout={logout}
+        />
+      )}
     </>
   );
 });

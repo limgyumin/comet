@@ -1,0 +1,48 @@
+.Register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-bottom: 3rem;
+  background-color: #ffffff;
+
+  &-Text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2.6rem;
+
+    &-Title {
+      font-weight: 400;
+      font-size: 2.6rem;
+    }
+
+    &-Subtitle {
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
+  }
+
+  &-GitHub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-Link {
+      text-decoration: none;
+    }
+
+    &-Icon {
+      width: 1.3rem;
+      margin-right: 0.6rem;
+    }
+
+    &-Text {
+      font-weight: 400;
+      font-size: 0.7rem;
+      margin-top: 1rem;
+      color: #757b81;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Register.css";
+import "./Register.scss";
 import FadeIn from "react-fade-in";
 import { Link } from "react-router-dom";
 import github from "../../assets/icons/github.svg";
