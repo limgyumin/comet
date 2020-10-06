@@ -1,13 +1,12 @@
 .ShowTotal {
   width: 45vh;
-  height: 34vh;
+  height: 31vh;
   background-color: #ffffff;
   border-radius: 1.6rem;
   display: flex;
   flex-direction: column;
-  padding: 1.2rem 1.5rem;
-  /* 위 오른쪽 아래 왼쪽 */
-  margin: 0 0 2rem 1.6rem;
+  padding: 1rem 1.5rem;
+  margin-left: 1.6rem;
 }
 
 .ShowTotal-Header {
@@ -33,12 +32,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 
 .ShowTotal-Header-ProgressBar-Text {
   font-size: 0.8rem;
   color: #909191;
   font-weight: 400;
-  margin-top: 0.6rem;
+  margin-top: 0.8rem;
 }

@@ -7,10 +7,10 @@ import { easeQuadInOut } from "d3-ease";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const ShowTotalCommit = ({ totalCommit, goalCommit }) => {
+const ShowTotalCommit = ({ total, intention }) => {
   return (
     <>
-      {totalCommit >= 0 && (
+      {total >= 0 && (
         <div className="ShowTotal">
           <div className="ShowTotal-Header">
             <img src={barChart} alt={barChart} />
@@ -19,7 +19,7 @@ const ShowTotalCommit = ({ totalCommit, goalCommit }) => {
           <div className="ShowTotal-Header-ProgressBar">
             <AnimatedProgressProvider
               valueStart={0}
-              valueEnd={totalCommit}
+              valueEnd={total}
               duration={1.4}
               easingFunction={easeQuadInOut}
             >
@@ -28,13 +28,13 @@ const ShowTotalCommit = ({ totalCommit, goalCommit }) => {
                 return (
                   <CircularProgressbar
                     value={roundedValue}
-                    maxValue={goalCommit}
+                    maxValue={intention}
                     text={`${roundedValue}`}
                     strokeWidth={6}
                     styles={{
                       root: {
-                        height: "7.6rem",
-                        width: "7.6rem",
+                        height: "6rem",
+                        width: "6rem",
                       },
                       path: {
                         stroke: "#191b1d",
@@ -59,7 +59,7 @@ const ShowTotalCommit = ({ totalCommit, goalCommit }) => {
               }}
             </AnimatedProgressProvider>
             <p className="ShowTotal-Header-ProgressBar-Text">
-              {goalCommit} 커밋까지 {goalCommit - totalCommit} 커밋 남았습니다.
+              {intention} 커밋까지 {intention - total} 커밋 남았습니다.
             </p>
           </div>
         </div>

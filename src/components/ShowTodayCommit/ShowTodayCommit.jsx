@@ -7,18 +7,18 @@ import styled, { keyframes } from "styled-components";
 import moment from "moment";
 import CountUp from "react-countup";
 
-const ShowTodayCommit = ({ todayCommit, todayChange }) => {
-  const calculatedCommit = todayCommit >= 10 ? 100 : todayCommit * 10;
+const ShowTodayCommit = ({ today, todayChange }) => {
+  const progressValue = today >= 10 ? 100 : today * 10;
   const animate = keyframes`
     0% {
       width: 0%;
     }
     100% {
-      width: ${calculatedCommit}%;
+      width: ${progressValue}%;
     }
   `;
   const Progress = styled.div`
-    width: ${calculatedCommit}%;
+    width: ${progressValue}%;
     height: 0.5rem;
     border-radius: 2rem;
     background-color: #ffffff;
@@ -27,7 +27,7 @@ const ShowTodayCommit = ({ todayCommit, todayChange }) => {
   `;
   return (
     <>
-      {todayCommit >= 0 && (
+      {today >= 0 && (
         <div className="ShowToday">
           <div className="ShowToday-Header">
             <div className="ShowToday-Header-Icon">
@@ -44,7 +44,7 @@ const ShowTodayCommit = ({ todayCommit, todayChange }) => {
           <div className="ShowToday-Header-Content">
             <div className="ShowToday-Header-Content-State">
               <CountUp
-                end={todayCommit}
+                end={today}
                 delay={0.1}
                 className="ShowToday-Header-Content-State-Count"
               />
@@ -58,15 +58,15 @@ const ShowTodayCommit = ({ todayCommit, todayChange }) => {
             <div className="ShowToday-Header-Content-ProgressBar">
               {/* <div
                 className="ShowToday-Header-Content-ProgressBar-Inside"
-                style={todayCommit >= 10 ? complete : progress}
+                style={today >= 10 ? complete : progress}
               ></div> */}
               <Progress />
             </div>
             <p className="ShowToday-Header-Content-Message">
-              {todayCommit < 40
-                ? todayCommit >= 10
+              {today < 40
+                ? today >= 10
                   ? "완료!"
-                  : `${todayCommit} / 10`
+                  : `${today} / 10`
                 : "세상에... 🙄"}
             </p>
           </div>
