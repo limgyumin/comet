@@ -56,10 +56,6 @@ const ShowTodayCommit = ({ today, todayChange }) => {
               )}
             </div>
             <div className="ShowToday-Header-Content-ProgressBar">
-              {/* <div
-                className="ShowToday-Header-Content-ProgressBar-Inside"
-                style={today >= 10 ? complete : progress}
-              ></div> */}
               <Progress />
             </div>
             <p className="ShowToday-Header-Content-Message">

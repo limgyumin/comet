@@ -21,7 +21,7 @@ const MainContainer = observer(() => {
   }, [userData]);
 
   const scheduleNotify = () => {
-    schedule.scheduleJob("0 0 8,10,12,14,16,18,20 * * *", async () => {
+    schedule.scheduleJob("0 1 8,10,12,14,16,18,20 * * *", async () => {
       if (localStorage.getItem("userId")) {
         const data = await requestHandleUserInfo();
         if (data.today === 0) {
